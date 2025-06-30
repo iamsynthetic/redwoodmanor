@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Explore",
+    "items": ["Home", "The Club", "Amenities", "Dining", "Events"]
+  },
+  {
+    "title": "",
+    "items": [
+      "Tournaments",
+      "Testimonials",
+      "Food Recommendation",
+      "Kids Club",
+      "Weddings",
+      "Corporate"
+    ]
+  }
+]

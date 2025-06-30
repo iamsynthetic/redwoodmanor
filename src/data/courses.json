@@ -1,0 +1,164 @@
+[
+  {
+    "id": 1,
+    "title": "HAIG'S DELIGHT",
+    "img": "/public/assets/home/course/hole1.png",
+    "depth": "26 YARDS",
+    "yards": "26 YARDS",
+    "par": "3",
+    "body": "A breathtaking opening hole. A picturesque, elevated tee demands a tee shot placed down the left side. Be cautious with your approach shot as the green severely slopes from the front left to the back right."
+  },
+  {
+    "id": 2,
+    "title": "OASIS",
+    "img": "/public/assets/home/course/hole2.png",
+    "depth": "21 YARDS",
+    "yards": "18 YARDS",
+    "par": "3",
+    "body": "The sole water hole on the golf course will make you weak in the knees with anxiety. The somewhat flat green is receptive to high approach shots. Favour the right center to avoid the watery grave."
+  },
+  {
+    "id": 3,
+    "title": "THE OAKS",
+    "img": "/public/assets/home/course/hole3.png",
+    "depth": "23 YARDS",
+    "yards": "21 YARDS",
+    "par": "3",
+    "body": "The shortest par four has a tremendous bite. A decent tee shot will leave you with a short approach. Be cautioned of the green's undulation. This silent killer will have you crying the three-putt blues."
+  },
+  {
+    "id": 4,
+    "title": "GENTLE BEND",
+    "img": "/public/assets/home/course/hole4.png",
+    "depth": "23 YARDS",
+    "yards": "17 YARDS",
+    "body": "The most challenging hole on the property. A narrow landing area off the tee tightens even further with the presence of the signature oak tree. Favour the left center to open your approach to the green.",
+    "par": "4"
+  },
+  {
+    "id": 5,
+    "title": "WINDY",
+    "img": "/public/assets/home/course/hole5.png",
+    "depth": "21 YARDS",
+    "yards": "20 YARDS",
+    "body": "Quite possibly the longest short par four you'll ever play. The fairway climbs steadily until it planes out around the green. Avoid the grouping of pines down the right. Add at least one club on your approach.",
+    "par": "4"
+  },
+  {
+    "id": 6,
+    "title": "FOOL'S FOLLY",
+    "img": "/public/assets/home/course/hole6.png",
+    "depth": "28 YARDS",
+    "yards": "25 YARDS",
+    "body": "A sharp dogleg left demands a tee shot be placed around the 150 yard marker to have an open look at the green. Take advantage of the large green to avoid the deep bunker to the front right.",
+    "par": "4"
+  },
+  {
+    "id": 7,
+    "title": "HARTMAN'S HONOUR",
+    "img": "/public/assets/home/course/hole7.png",
+    "depth": "30 YARDS",
+    "yards": "20 YARDS",
+    "body": "A straight away par three that plays the yardage. The presence of three greenside bunkers are visibly intimidating while contemplating your approach. Keep it short of the pin to allow for an uphill putt.",
+    "par": "3"
+  },
+  {
+    "id": 8,
+    "title": "PINE ALLEY",
+    "img": "/public/assets/home/course/hole8.png",
+    "depth": "19 YARDS",
+    "yards": "17 YARDS",
+    "body": "This par four begs you to \"grip it and rip it!\" Your approach is very demanding as you are hitting to the smallest green on the course, guarded by a deep bunker right and overhanging trees on the left.",
+    "par": "4"
+  },
+  {
+    "id": 9,
+    "title": "KELLY'S CANYON",
+    "img": "/public/assets/home/course/hole9.png",
+    "depth": "20 YARDS",
+    "yards": "19 YARDS",
+    "body": "An uphill par four that seems to plane out around the 150 yard marker. Take advantage of the right side of this hole from tee to green as everything feeds from right to left. Two-putt this green and run!",
+    "par": "5"
+  },
+  {
+    "id": 10,
+    "title": "PARROT'S PET",
+    "img": "/public/assets/home/course/hole10.png",
+    "depth": "31 YARDS",
+    "yards": "23 YARDS",
+    "body": "A gentle dogleg right that must not be toyed with. Take advantage of the left side of the fairway and you will have a full look at the green. Any ball falling short usually runs onto this undulating green.",
+    "par": "4"
+  },
+  {
+    "id": 11,
+    "title": "THREAD THE NEEDLE",
+    "img": "/public/assets/home/course/hole11.png",
+    "depth": "30 YARDS",
+    "yards": "17 YARDS",
+    "body": "This elevated tee shot usually plays about one to one and a half clubs shorter. The green is guarded by three taunting bunkers that would be more than happy to have you as a guest. Make a three, then flee!",
+    "par": "3"
+  },
+  {
+    "id": 12,
+    "title": "CARDIAC CLIMB",
+    "img": "/public/assets/home/course/hole12.png",
+    "depth": "24 YARDS",
+    "yards": "22 YARDS",
+    "body": "\"Cardiac Climb\" is a fitting name for this short, sharp, dogleg left par four. A steep incline usually leaves a blind approach to this small green. Aim for the center of this green to avoid bunkers short left and right.",
+    "par": "4"
+  },
+  {
+    "id": 13,
+    "title": "CAP'S CHALLENGE",
+    "img": "/public/assets/home/course/hole13.png",
+    "depth": "28 YARDS",
+    "yards": "18 YARDS",
+    "body": "A gorgeous par three with beautifully contoured sandtraps that are visually menacing from the tee. This hole plays its full yardage so choose your club wisely and swing with confidence to the front center.",
+    "par": "3"
+  },
+  {
+    "id": 14,
+    "title": "IT'S A BREEZE",
+    "img": "/public/assets/home/course/hole14.png",
+    "depth": "28 YARDS",
+    "yards": "18 YARDS",
+    "body": "A unique par four that exudes character. One of the two \"bunkerless holes on the property that exchanges hazards for undulating fairways. The elevated green requires a high approach shot.",
+    "par": "4"
+  },
+  {
+    "id": 15,
+    "title": "BIG CHIEF",
+    "img": "/public/assets/home/course/hole15.png",
+    "depth": "25 YARDS",
+    "yards": "21 YARDS",
+    "body": "The signature hole \"Big Chief\" is the first of two par fives on the property. Simply put, find the fairway, find the green. Avoid any of the bunkers and you will be happy with the outcome.",
+    "par": "5"
+  },
+  {
+    "id": 16,
+    "title": "BUNKER HILL",
+    "img": "/public/assets/home/course/hole16.png",
+    "depth": "31 YARDS",
+    "yards": "24 YARDS",
+    "body": "The longest par four at Midland Golf & Country Club emphasizes a straight tee shot that favours the left side of the fairway. An elevated green is awaiting a long approach shot. Par is a tremendous score!",
+    "par": "4"
+  },
+  {
+    "id": 17,
+    "title": "GOIN' HOME",
+    "img": "/public/assets/home/course/hole17.png",
+    "depth": "30 YARDS",
+    "yards": "21 YARDS",
+    "body": "The last of the fives puts the accent on accuracy off the tee. The practice facility borders the left side of the fairway which is \"out-of-bounds\". Avoid the greenside bunker to the left and par is in the cards.",
+    "par": "5"
+  },
+  {
+    "id": 18,
+    "title": "AMEN",
+    "img": "/public/assets/home/course/hole18.png",
+    "depth": "30 YARDS",
+    "yards": "23 YARDS",
+    "body": "\"Amen\" is a fitting name for the finishing hole. A short, dogleg left puts a premium on fairway. Hit a fairway metal or long iron to the 150 yard marker and you will have a look at the well guarded green.",
+    "par": "4"
+  }
+]

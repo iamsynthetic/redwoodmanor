@@ -1,0 +1,10 @@
+[
+  {
+    "id": 1,
+    "label": "image 1",
+    "img": "/public/assets/dining/recommended/burger.png",
+    "alt": "a man hitting a ball over a net in the pool",
+    "thetitle": "Banquet Burger",
+    "thetext": "A club favorite, this gourmet burger features a dry-aged beef patty, aged white cheddar, caramelized onions, and black garlic aioli, all stacked on a toasted brioche bun. Served with truffle-parmesan fries, it’s indulgence done right."
+  }
+]

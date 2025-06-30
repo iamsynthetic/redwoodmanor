@@ -1,0 +1,90 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;1,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap"); */
+
+@import url("https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import "tailwindcss";
+
+@plugin "daisyui" {
+  themes: light --default, dark --prefersdark;
+}
+@plugin "daisyui/theme" {
+  name: "cyberpunks";
+  default: true;
+  prefersdark: false;
+  color-scheme: "light";
+  --color-base-100: oklch(0.9403 0.0131 71.33);
+  --color-base-200: oklch(0.9203 0.0131 71.33);
+  --color-base-300: oklch(0.8903 0.0131 71.33);
+  --color-base-content: oklch(0.184 0.0081 118.61);
+  --color-primary: oklch(0.4293 0.1583 23.45);
+  --color-primary-content: oklch(0.8561 0.1044 65.67);
+  --color-secondary: oklch(0.8561 0.1044 65.67);
+  --color-secondary-content: oklch(0.4293 0.1583 23.45);
+  --color-accent: oklch(0.6487 0.0846 255.68);
+  --color-accent-content: oklch(0.9403 0.0131 71.33);
+  --color-neutral: oklch(0.184 0.0081 118.61);
+  --color-neutral-content: oklch(0.9403 0.0131 71.33);
+  --color-info: oklch(0.5256 0.0375 128.46);
+  --color-info-content: oklch(0.9403 0.0131 71.33);
+  --color-success: oklch(64.8% 0.15 160);
+  --color-success-content: oklch(0% 0 0);
+  --color-warning: oklch(84.71% 0.199 83.87);
+  --color-warning-content: oklch(0% 0 0);
+  --color-error: oklch(71.76% 0.221 22.18);
+  --color-error-content: oklch(0% 0 0);
+  --radius-selector: 0rem;
+  --radius-field: 2rem;
+  --radius-box: 0rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 0;
+  --noise: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+.primaryred {
+  color: oklch(0.8561 0.1044 65.67);
+  /*#931621*/
+}
+
+.primarypeach {
+  color: oklch(0.8561 0.1044 65.67);
+  /*ffc285*/
+}
+
+.cardoregular {
+  font-family: "Cardo", serif;
+  font-weight: 400;
+  font-style: normal;
+  opacity: 1;
+}
+
+.cardobold {
+  font-family: "Cardo", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.cardoregularitalic {
+  font-family: "Cardo", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.montserratlight {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  /* font-style: light; */
+}
+.montserratsemi {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  /* font-style: normal; */
+}

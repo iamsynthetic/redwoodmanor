@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "label": "image 1",
+    "img": "/public/assets/home/gallery/galleryimg1.png",
+    "alt": "overhead shot of a golf course"
+  },
+  {
+    "id": 2,
+    "label": "image 2",
+    "img": "/public/assets/home/gallery/galleryimg2.png",
+    "alt": "a golf ball close to the hole"
+  },
+  {
+    "id": 3,
+    "label": "image 3",
+    "img": "/public/assets/home/gallery/galleryimg3.png",
+    "alt": "close up of a wine bottle and a glass"
+  }
+]

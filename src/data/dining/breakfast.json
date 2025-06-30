@@ -1,0 +1,136 @@
+[
+  {
+    "id": 1,
+    "category": "Healthy Start",
+    "items": [
+      {
+        "name": "Granola Parfait",
+        "details": "Greek & Fruit Yogurt, Kare® Organic Granola, Seasonal Berries",
+        "price": 12
+      },
+      {
+        "name": "Fruit Plate",
+        "details": "Seasonal Fruit & Berries",
+        "price": 14
+      },
+      {
+        "name": "Avocado Toast",
+        "details": "Multigrain Toast, Smashed Avocado, Poached Egg",
+        "price": 18
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "category": "Eggs",
+    "items": [
+      {
+        "name": "The Classic",
+        "details": "Two Eggs Any Style, Crispy Potatoes, Toast One Choice of Maple Bacon, Banger Sausage, or Chicken & Apple Sausage",
+        "price": 21
+      },
+      {
+        "name": "Three Eggs Omelette",
+        "details": "Made to your preference, Provençal Tomatoes, Crispy Potatoes",
+        "price": 22
+      },
+      {
+        "name": "Eggs Benedict",
+        "details": "Poached Egg, Provençal Tomatoes, Crispy Potatoes, Hollandaise Back Bacon, Atlantic Smoked Salmon, Carmelized Onion & Mushroom",
+        "price": 23
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "category": "Beverages",
+    "items": [
+      {
+        "name": "Mineral Water",
+        "details": "",
+        "price": 2
+      },
+      {
+        "name": "Freshly Brewed Coffee",
+        "details": "",
+        "price": 4
+      },
+      {
+        "name": "Espresso",
+        "details": "",
+        "price": 5
+      },
+      {
+        "name": "Cappuchino",
+        "details": "",
+        "price": 6
+      },
+      {
+        "name": "Tea",
+        "details": "",
+        "price": 3
+      },
+      {
+        "name": "Smoothie",
+        "details": "",
+        "price": 9
+      },
+      {
+        "name": "Fruit Juice",
+        "details": "ask your server",
+        "price": 5
+      },
+      {
+        "name": "Soft Drinks",
+        "details": "ask your server",
+        "price": 2
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "category": "Sides",
+    "items": [
+      {
+        "name": "French Fries",
+        "details": "",
+        "price": 6
+      },
+      {
+        "name": "Sweet Potato Fries",
+        "details": "",
+        "price": 7
+      },
+      {
+        "name": "Chicken Sausage",
+        "details": "",
+        "price": 8
+      },
+      {
+        "name": "Maple Sausage",
+        "details": "",
+        "price": 8
+      },
+      {
+        "name": "Bacon",
+        "details": "",
+        "price": 9
+      },
+      {
+        "name": "Back Bacon",
+        "details": "",
+        "price": 9
+      },
+      {
+        "name": "Fruit bowl",
+        "details": "ask your server",
+        "price": 6
+      },
+      {
+        "name": "Toast",
+        "details": "ask your server",
+        "price": 2
+      }
+    ]
+  }
+]

@@ -1,0 +1,72 @@
+/*---------------------------------- colors ----------------------------------*/
+
+$colordark: #1c0221; /* hex */
+$colorgreen: #43c59e; /* hex */
+$colorpink: #ff9fa7; /* hex */
+$colorblue: #77c2f3; /* hex */
+$colorlight: #fff6e8; /* hex */
+$bg-colordark: rgba($colordark, 1);
+$bg-colorgreen: rgba($colorgreen, 1);
+$bg-colorpink: rgba($colorpink, 1);
+$bg-colorblue: rgba($colorblue, 1);
+$bg-colorlight: rgba($colorlight, 1);
+
+/*---------------------------------- end colors ----------------------------------*/
+
+.iconbgblue {
+  background-color: #4aa5e0;
+}
+.iconbgpink {
+  background-color: #ea8b93;
+}
+
+.hide {
+  display: none;
+}
+
+.titletxt {
+  color: $colordark;
+  z-index: 31;
+  font-family: "Shrikhand", serif;
+  font-weight: 400;
+  font-style: normal;
+  white-space: nowrap;
+  // filter: drop-shadow(4px 3px 0px rgba(28, 2, 33, 0.4));
+}
+
+.pretitlecopy {
+  color: $colordark;
+  font-family: "Nunito", "Varela Round", "Quicksand", "arial";
+  font-weight: 500;
+  font-style: normal;
+  font-size: 20px;
+}
+
+.titlecopy {
+  font-family: "Nunito", "Varela Round", "Quicksand", "arial";
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 28px;
+}
+.bodycopy {
+  color: $colordark;
+  font-family: "Nunito", "Varela Round", "Quicksand", "arial";
+  font-weight: 700;
+  font-style: normal;
+  font-size: 16px;
+}
+
+.pricecopy {
+  font-family: "Nunito", "Varela Round", "Quicksand", "arial";
+  font-weight: 700;
+  font-style: normal;
+  font-size: 20px;
+}
+
+.timecopy {
+  font-family: "Nunito", "Varela Round", "Quicksand", "arial";
+  font-weight: 500;
+  font-style: italic;
+  font-size: 16px;
+}

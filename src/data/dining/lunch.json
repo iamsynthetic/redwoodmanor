@@ -1,0 +1,183 @@
+[
+  {
+    "id": 1,
+    "category": "Soups & Salads",
+    "items": [
+      {
+        "name": "Soup of the day",
+        "details": "",
+        "price": 14
+      },
+      {
+        "name": "Onion Soup",
+        "details": "Garlic Crostini, Gruyere, Swiss Cheese",
+        "price": 15
+      },
+      {
+        "name": "Salad",
+        "details": "Granola, Goat Cheese, Niagara Cider Vinaigrette",
+        "price": 18
+      },
+      {
+        "name": "Cesar Salad",
+        "details": "Romaine, Garlic & Parmesan Dusted Croutons, Canadian Bacon",
+        "price": 16
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "category": "Appetizers",
+    "items": [
+      {
+        "name": "Crab Cake",
+        "details": "dungeness & rock crab, celery, charred lemon & dill aioli, celeriac & apple slaw, honey mustard vinaigrette",
+        "price": 36
+      },
+      {
+        "name": "Crispy Calamari",
+        "details": "humboldt squid, lemon, italian parsley, charred jalapeño aioli",
+        "price": 26
+      },
+      {
+        "name": "Caprese",
+        "details": "Burrata, Pangrattato, Grilled Plum, Caramelized Orange Dressing Add Chicken, Shrimp, or Salmon",
+        "price": 20
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "category": "Mains",
+    "items": [
+      {
+        "name": "Steak Frites",
+        "details": "AAA Striploin, Truffle & Parmesan Fries, Chimichurri",
+        "price": 39
+      },
+      {
+        "name": "Fish & Chips",
+        "details": "Lightly battered halibut filet, served with fries, house tartar sauce, and deli coleslaw",
+        "price": 32
+      },
+      {
+        "name": "Penne Rigate",
+        "details": "With your choice of tomato basil, or beef bolognese sauce",
+        "price": 18
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "category": "Handhelds",
+    "items": [
+      {
+        "name": "Banquet Burger",
+        "details": "8oz. beef patty, cheddar cheese, leaf lettuce, pickles, onions, tomato Add bacon, mushrooms, fried egg",
+        "price": 20
+      },
+      {
+        "name": "Three Cheese Grilled Cheese",
+        "details": "Swiss, aged cheddar, and provolone with red onion, and dill pickle spear",
+        "price": 16
+      },
+      {
+        "name": "French Dip",
+        "details": "Slow cooked chuck, provolone cheese on a french roll",
+        "price": 24
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "category": "Beverages",
+    "items": [
+      {
+        "name": "Mineral Water",
+        "details": "",
+        "price": 2
+      },
+      {
+        "name": "Freshly Brewed Coffee",
+        "details": "",
+        "price": 4
+      },
+      {
+        "name": "Espresso",
+        "details": "",
+        "price": 5
+      },
+      {
+        "name": "Cappuchino",
+        "details": "",
+        "price": 6
+      },
+      {
+        "name": "Tea",
+        "details": "",
+        "price": 3
+      },
+      {
+        "name": "Smoothie",
+        "details": "",
+        "price": 9
+      },
+      {
+        "name": "Fruit Juice",
+        "details": "ask your server",
+        "price": 5
+      },
+      {
+        "name": "Soft Drinks",
+        "details": "ask your server",
+        "price": 2
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "category": "Sides",
+    "items": [
+      {
+        "name": "French Fries",
+        "details": "",
+        "price": 6
+      },
+      {
+        "name": "Sweet Potato Fries",
+        "details": "",
+        "price": 7
+      },
+      {
+        "name": "Chicken Sausage",
+        "details": "",
+        "price": 8
+      },
+      {
+        "name": "Maple Sausage",
+        "details": "",
+        "price": 8
+      },
+      {
+        "name": "Bacon",
+        "details": "",
+        "price": 9
+      },
+      {
+        "name": "Back Bacon",
+        "details": "",
+        "price": 9
+      },
+      {
+        "name": "Fruit bowl",
+        "details": "ask your server",
+        "price": 6
+      },
+      {
+        "name": "Toast",
+        "details": "ask your server",
+        "price": 2
+      }
+    ]
+  }
+]

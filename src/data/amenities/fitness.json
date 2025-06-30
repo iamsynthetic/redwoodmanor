@@ -1,0 +1,9 @@
+[
+  {
+    "id": 1,
+    "label": "image 1",
+    "img": "/public/assets/amenities/fitness/fitness.png",
+    "alt": "a gym with wood panel walls and a big fan in the middle",
+    "thetext":"The state-of-the-art fitness center at Redwood Manor blends cutting-edge equipment with scenic views of the surrounding redwoods.<br/><br/>Members enjoy access to top-tier cardio and strength-training machines, a private studio for yoga and group classes, and on-site personal trainers to support individualized wellness goals. It’s a space designed to inspire both performance and balance."
+  }
+]

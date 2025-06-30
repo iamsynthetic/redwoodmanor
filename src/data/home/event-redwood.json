@@ -1,0 +1,23 @@
+[
+  {
+    "schedule": {
+      "title": "Schedule",
+      "dates": "July 4 - 6",
+      "time": "9:00am - 3pm",
+      "venue": "Redwood Manor",
+      "address": {
+        "street": "1210 Whispering Pines Lane",
+        "city": "Millhaven",
+        "state": "CA",
+        "zip": "94948",
+        "country": "United States"
+      }
+    },
+    "event": {
+      "title": "The Redwood Classic",
+      "description": "Our signature annual invitational, The Redwood Classic brings together top players for a weekend of championship play beneath the towering redwoods, complete with gourmet dining, live entertainment, and a black-tie awards gala.",
+      "entryFee": "$200 per golfer",
+      "buttonText": "Purchase"
+    }
+  }
+]

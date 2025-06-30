@@ -1,0 +1,10 @@
+[
+  {
+    "id": 1,
+    "label": "image 1",
+    "img": "/public/assets/dining/recommended/steak.png",
+    "alt": "a close up of a steak with some potatoes",
+    "thetitle": "AAA Tenderloin",
+    "thetext": "Perfectly seared and melt-in-your-mouth tender, this center-cut filet is served with roasted Yukon Gold potatoes and a house-made herb butter that adds rich, savory depth to every bite."
+  }
+]

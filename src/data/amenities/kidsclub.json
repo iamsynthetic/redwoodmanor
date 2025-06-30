@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "img": "/public/assets/amenities/kidsclub/img1.png",
+    "alt": "kid playing with a round toy"
+  },
+  {
+    "id": 2,
+    "img": "/public/assets/amenities/kidsclub/img2.png",
+    "alt": "close up of a wood container with red paint in it"
+  },
+  {
+    "id": 3,
+    "img": "/public/assets/amenities/kidsclub/img3.png",
+    "alt": "kid about to throw a baseball"
+  },
+  {
+    "id": 4,
+    "img": "/public/assets/amenities/kidsclub/img4.png",
+    "alt": "feet and a mini putt club on an artificial grass surface near the hole"
+  },
+  {
+    "id": 5,
+    "img": "/public/assets/amenities/kidsclub/img5.png",
+    "alt": "kid sitting on a stump, a sign on it says disc golf flying objects"
+  },
+  {
+    "id": 6,
+    "img": "/public/assets/amenities/kidsclub/img6.png",
+    "alt": "open drawer full of kids toys"
+  }
+]

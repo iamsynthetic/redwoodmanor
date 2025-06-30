@@ -1,0 +1,91 @@
+/*---------------------------------- colors ----------------------------------*/
+
+$colordark: #1c0221; /* hex */
+$colorgreen: #43c59e; /* hex */
+$colorpink: #ff9fa7; /* hex */
+$colorblue: #77c2f3; /* hex */
+$colorlight: #fff6e8; /* hex */
+$bg-colordark: rgba($colordark, 1);
+$bg-colorgreen: rgba($colorgreen, 1);
+$bg-colorpink: rgba($colorpink, 1);
+$bg-colorblue: rgba($colorblue, 1);
+$bg-colorlight: rgba($colorlight, 1);
+
+.slidercontainer {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+
+.slidertrack {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+}
+
+.slide {
+  flex-shrink: 0;
+}
+
+.navbutton {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.navbutton:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.titletxt {
+  color: $colordark;
+  z-index: 31;
+  font-family: "Shrikhand", serif;
+  font-weight: 400;
+  font-style: normal;
+  white-space: nowrap;
+  // filter: drop-shadow(4px 3px 0px rgba(28, 2, 33, 0.4));
+}
+
+.pretitlecopy {
+  color: $colordark;
+  font-family: "Nunito", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 20px;
+}
+
+.titlecopy {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 28px;
+}
+.bodycopy {
+  color: $colordark;
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 16px;
+}
+
+.pricecopy {
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 20px;
+}
+
+.timecopy {
+  font-family: "Nunito", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+  font-size: 16px;
+}
