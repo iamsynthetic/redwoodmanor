@@ -175,7 +175,7 @@ const VerticalContentSwitcher: React.FC<VerticalContentSwitcherProps> = ({
           backgroundColor="#931621"
           hoverColor="#ffc285"
           textColor="#ffc285"
-          className="btn-secondary"
+          theclassName="btn-secondary"
           onClick={handlePrev}
         >
           previous
@@ -189,7 +189,7 @@ const VerticalContentSwitcher: React.FC<VerticalContentSwitcherProps> = ({
           backgroundColor="#931621"
           hoverColor="#ffc285"
           textColor="#ffc285"
-          className="btn-secondary"
+          theclassName="btn-secondary"
           onClick={handleNext}
         >
           next
