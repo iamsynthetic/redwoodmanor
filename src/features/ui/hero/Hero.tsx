@@ -1,6 +1,9 @@
 import { useEffect, useRef } from "react";
 import type { ReactNode } from "react";
 
+import { AdvancedImage } from "@cloudinary/react";
+import { Cloudinary } from "@cloudinary/url-gen";
+
 interface HeroProps {
   image: string;
   alt?: string;
@@ -23,6 +26,15 @@ const Hero: React.FC<HeroProps> = ({
   const titleRef = useRef<HTMLHeadingElement>(null);
   const bodyRef = useRef<HTMLParagraphElement>(null);
   const overlayRef = useRef<HTMLDivElement>(null);
+
+  const cld = new Cloudinary({
+    cloud: {
+      cloudName: "dca4atadh",
+    },
+  });
+
+  // Use the image with public ID, 'front_face'.
+  const myImage = cld.image("front_face");
 
   useEffect(() => {
     // Simple animations without external GSAP library
@@ -66,12 +78,41 @@ const Hero: React.FC<HeroProps> = ({
       style={{ height }}
     >
       {/* Background Image */}
-      <div
+
+      {/* <div
         role="img"
         aria-label={`${alt}`}
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${image})` }}
+      /> */}
+
+      <AdvancedImage
+        cldImg={myImage}
+        alt={alt}
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${image})` }}
       />
+
+      {/* <CldImage
+        role="img"
+        // width={1400}
+        //         height={900}
+        src=""
+        alt={`${alt}`}
+        // className={
+        //   hoveredIndex === index
+        //     ? `${styles.imagehovered} ${"workimg" + index}`
+        //     : `${styles.imagenothovered} ${"workimg" + index}`
+        // }
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${image})` }}
+      /> */}
+      {/* <div
+        role="img"
+        aria-label={`${alt}`}
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${image})` }}
+      /> */}
 
       {/* Overlay for better text readability */}
       {/* <div ref={overlayRef} className="absolute inset-0" /> */}
