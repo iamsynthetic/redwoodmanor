@@ -21,6 +21,9 @@ function TheClub() {
     "only screen and (min-width : 601px) and (max-width : 1023px)"
   );
   // const isDesktop = useMediaQuery("only screen and (min-width : 1024px)");
+  const heroImage = `${
+    import.meta.env.VITE_HERO_IMAGE_BASE_URL
+  }club/hero/hero.webp`;
 
   useEffect(() => {
     if (location.hash) {
@@ -44,7 +47,10 @@ function TheClub() {
   return (
     <div>
       <Hero
-        image="/public/assets/club/hero/hero.png"
+        // image="/public/assets/club/hero/hero.png"
+        // image="/redwoodmanor/club/hero/hero.webp"
+
+        image={heroImage}
         alt="a man golfing, sand dune's in the background with the sun setting"
         title="The Club"
         bodyText="Redwood Manor is a distinguished private club rooted in tradition and excellence. With a rich history, world-class facilities, and a vibrant community, we offer members an unparalleled experience 

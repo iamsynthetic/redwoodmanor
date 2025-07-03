@@ -26,6 +26,9 @@ const EventSchedule = lazy(
 
 function Home() {
   const location = useLocation();
+  const heroImage = `${
+    import.meta.env.VITE_HERO_IMAGE_BASE_URL
+  }home/hero/hero.webp`;
 
   useEffect(() => {
     if (location.hash) {
@@ -49,8 +52,8 @@ function Home() {
   return (
     <div>
       <Hero
-        // image="/public/assets/home/hero/hero.png"
-        image="/redwoodmanor/home/hero/hero.png"
+        // image="/redwoodmanor/home/hero/hero.webp"
+        image={heroImage}
         alt="a large building off a body of water, there's a kayaker in the water"
         title="Welcome"
         bodyText="Welcome to Redwood Manor, where timeless elegance meets California’s natural beauty. We invite you to explore our prestigious country club, a place to relax, connect, and create 
