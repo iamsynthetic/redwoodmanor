@@ -9,6 +9,8 @@ import { IoClose } from "react-icons/io5";
 import { useMediaQuery } from "@uidotdev/usehooks";
 
 const Navbar = ({ menuBgColor = "#333" }) => {
+  const logoimage = `${import.meta.env.VITE_HERO_IMAGE_BASE_URL}/home/logo.png`;
+
   const isMobile = useMediaQuery(
     "only screen and (min-width : 0px) and (max-width : 600px)"
   );
@@ -154,7 +156,8 @@ const Navbar = ({ menuBgColor = "#333" }) => {
             <GiHamburgerMenu size={24} />
           </Button>
           <img
-            src="/public/assets/home/logo.png"
+            src={logoimage}
+            // src="/public/assets/home/logo.png"
             alt="Company logo"
             className={`${styles.imglogo}`}
           />
