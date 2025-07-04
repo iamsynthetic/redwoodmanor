@@ -12,10 +12,8 @@ const Navbar = ({ menuBgColor = "#333" }) => {
   const isMobile = useMediaQuery(
     "only screen and (min-width : 0px) and (max-width : 600px)"
   );
-  // Removed unused menuOpen state
   const navigate = useNavigate();
 
-  // Initialize menu overlay to be hidden on component mount
   useEffect(() => {
     gsap.set(`.${styles.menuoverlay}`, {
       display: "none",
@@ -24,29 +22,23 @@ const Navbar = ({ menuBgColor = "#333" }) => {
   }, []);
 
   const handleHamburgerClick = (): void => {
-    // setMenuOpen(true);
-
-    // Set initial state for menu overlay and show it
     gsap.set(`.${styles.menuoverlay}`, {
       display: "block",
       y: "-100%",
       opacity: 1,
     });
 
-    // Set initial state for menu items - invisible
     gsap.set(`.${styles.menuoverlay} button:not(.${styles.closebtn})`, {
       opacity: 0,
       y: -30,
     });
 
-    // Animate menu sliding down from top
     gsap.to(`.${styles.menuoverlay}`, {
       duration: 0.5,
       y: "0%",
       ease: "power2.out",
     });
 
-    // Animate menu items fading in with stagger
     gsap.to(`.${styles.menuoverlay} button:not(.${styles.closebtn})`, {
       duration: 0.3,
       opacity: 1,
@@ -58,7 +50,6 @@ const Navbar = ({ menuBgColor = "#333" }) => {
   };
 
   const handleCloseMenu = (): void => {
-    // Animate menu items fading out
     gsap.to(`.${styles.menuoverlay} button:not(.${styles.closebtn})`, {
       duration: 0.2,
       opacity: 0,
@@ -67,7 +58,6 @@ const Navbar = ({ menuBgColor = "#333" }) => {
       ease: "power2.in",
     });
 
-    // Animate menu sliding up
     gsap.to(`.${styles.menuoverlay}`, {
       duration: 0.4,
       y: "-100%",
@@ -75,31 +65,24 @@ const Navbar = ({ menuBgColor = "#333" }) => {
       ease: "power2.in",
       onComplete: () => {
         gsap.set(`.${styles.menuoverlay}`, { display: "none" });
-        // setMenuOpen(false); // Removed unused setter
       },
     });
   };
 
   const handleMenuItemMouseEnter = (item: string): void => {
-    // Animate menu item scaling up on hover
     gsap.to(`#btn-${item}`, {
       duration: 0.4,
-      // scale: 1.1,
       x: "+20",
       color: "#f1eae2",
-      // opacity: 0.5,
       ease: "Quad.easeInOut",
     });
   };
 
   const handleMenuItemMouseLeave = (item: string): void => {
-    // Animate menu item scaling back down on mouse leave
     gsap.to(`#btn-${item}`, {
       duration: 0.4,
-      // scale: 1,
       x: "0",
       color: "#ffc285",
-      // opacity: 1,
       ease: "Quad.easeInOut",
     });
   };
@@ -113,7 +96,6 @@ const Navbar = ({ menuBgColor = "#333" }) => {
       route = "/" + item.toLowerCase().replace(/\s+/g, "-");
     }
 
-    // Animate menu items fading out
     gsap.to(`.${styles.menuoverlay} button:not(.${styles.closebtn})`, {
       duration: 0.2,
       opacity: 0,
@@ -122,7 +104,6 @@ const Navbar = ({ menuBgColor = "#333" }) => {
       ease: "power2.in",
     });
 
-    // Animate menu sliding up, then navigate
     gsap.to(`.${styles.menuoverlay}`, {
       duration: 0.4,
       y: "-100%",
@@ -130,19 +111,13 @@ const Navbar = ({ menuBgColor = "#333" }) => {
       ease: "power2.in",
       onComplete: () => {
         gsap.set(`.${styles.menuoverlay}`, { display: "none" });
-        // setMenuOpen(false); // Removed unused setter
         navigate(route);
       },
     });
   };
 
   const handleBookNowClick = (): void => {
-    navigate("/events#contact-form");
-    // ReactGA.event({
-    //   category: "main nav",
-    //   action: "click",
-    //   label: "book now in main nav",
-    // });
+    navigate("/events#contactform");
   };
 
   return (
@@ -160,7 +135,6 @@ const Navbar = ({ menuBgColor = "#333" }) => {
         aria-label="Main navigation"
       >
         <div
-          // className={`flex flex-col md:flex-row items-center justify-between pt-2 pb-4`}
           className={
             isMobile
               ? `hidden`
@@ -198,7 +172,6 @@ const Navbar = ({ menuBgColor = "#333" }) => {
         </div>
 
         <div
-          // className={`flex flex-col md:flex-row items-center justify-between pt-2 pb-4`}
           className={
             isMobile
               ? `flex flex-col items-center justify-between pt-2 pb-4`
@@ -233,8 +206,6 @@ const Navbar = ({ menuBgColor = "#333" }) => {
             </Button>
           </div>
         </div>
-
-        {/* Full screen overlay menu - always rendered for GSAP animations */}
         <div
           className={`${styles.menuoverlay}`}
           style={{ backgroundColor: menuBgColor }}

@@ -2,61 +2,61 @@
   {
     "id": 1,
     "label": "image 1",
-    "img": "/public/assets/club/gallery/img1.png",
+    "img": "/redwoodmanor/club/gallery/img1.webp",
     "alt": "a pool table with red felt and pool balls on it"
   },
   {
     "id": 2,
     "label": "image 2",
-    "img": "/public/assets/club/gallery/img2.png",
+    "img": "/redwoodmanor/club/gallery/img2.webp",
     "alt": "the inside of a restaurant with tables and chairs"
   },
   {
     "id": 3,
     "label": "image 3",
-    "img": "/public/assets/club/gallery/img3.png",
+    "img": "/redwoodmanor/club/gallery/img3.webp",
     "alt": "a bar area with stools and a counter"
   },
   {
     "id": 4,
     "label": "image 4",
-    "img": "/public/assets/club/gallery/img4.png",
+    "img": "/redwoodmanor/club/gallery/img4.webp",
     "alt": "the driving range with chairs and a table in the background"
   },
   {
     "id": 5,
     "label": "image 5",
-    "img": "/public/assets/club/gallery/img5.png",
+    "img": "/redwoodmanor/club/gallery/img5.webp",
     "alt": "close up of a mixed drink with a bottle blured behind it"
   },
   {
     "id": 6,
     "label": "image 6",
-    "img": "/public/assets/club/gallery/img6.png",
+    "img": "/redwoodmanor/club/gallery/img6.webp",
     "alt": "a couple of flags on brown dirt with some big trees in the background"
   },
   {
     "id": 7,
     "label": "image 7",
-    "img": "/public/assets/club/gallery/img7.png",
+    "img": "/redwoodmanor/club/gallery/img7.webp",
     "alt": "sunset over a bar with wood walls"
   },
   {
     "id": 8,
     "label": "image 8",
-    "img": "/public/assets/club/gallery/img8.png",
+    "img": "/redwoodmanor/club/gallery/img8.webp",
     "alt": "close up of a fleet of golf carts in a neat row"
   },
   {
     "id": 9,
     "label": "image 9",
-    "img": "/public/assets/club/gallery/img9.png",
+    "img": "/redwoodmanor/club/gallery/img9.webp",
     "alt": "close up of a back splash made of black and white marble with a popcorn machine and a wooden bowl "
   },
   {
     "id": 10,
     "label": "image 10",
-    "img": "/public/assets/club/gallery/img10.png",
+    "img": "/redwoodmanor/club/gallery/img10.webp",
     "alt": "inside a wooded area, looking out to a golf course with a couple people playing golf, and a deer grazing."
   }
 ]

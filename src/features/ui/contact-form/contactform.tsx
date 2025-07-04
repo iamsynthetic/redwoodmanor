@@ -2,8 +2,6 @@
 import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-// import styles from "./styles.module.scss";
-// import { gsap } from "gsap";
 import { Button } from "../button/Button";
 
 const ContactForm = () => {
@@ -18,9 +16,6 @@ const ContactForm = () => {
     email?: string;
     message?: string;
   }
-
-  // const booknowhovercolor = "#FFF6E8";
-  // const booknowdefaultcolor = "#77C2F3";
 
   const [formData, setFormData] = useState<FormData>({
     name: "",
@@ -65,7 +60,6 @@ const ContactForm = () => {
     setIsSubmitting(true);
 
     try {
-      // Simulate async action (e.g., API call)
       await new Promise<void>((resolve) => setTimeout(resolve, 2000));
 
       toast.success("Message sent successfully!");
@@ -76,21 +70,6 @@ const ContactForm = () => {
       setIsSubmitting(false);
     }
   };
-
-  // const handlebooknowmouseenter = (id: string) => {
-  //   gsap.to(id, {
-  //     duration: 0.2,
-  //     backgroundColor: booknowhovercolor,
-  //     ease: "quint.easeOut",
-  //   });
-  // };
-  // const handlebooknowmouseleave = (id: string) => {
-  //   gsap.to(id, {
-  //     duration: 0.2,
-  //     backgroundColor: booknowdefaultcolor,
-  //     ease: "quint.easeOut",
-  //   });
-  // };
 
   return (
     <div className="flex flex-row justify-center items-center">

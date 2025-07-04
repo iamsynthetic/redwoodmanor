@@ -6,6 +6,8 @@ import { Suspense, lazy } from "react";
 import { useMediaQuery } from "@uidotdev/usehooks";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import { AdvancedImage } from "@cloudinary/react";
+import { Cloudinary } from "@cloudinary/url-gen";
 const Leadership = lazy(() => import("../features/ui/leadership/Leadership"));
 const Clubgallery = lazy(() => import("../features/ui/galleries/Gallery"));
 const Testimonials = lazy(
@@ -24,6 +26,12 @@ function TheClub() {
   const heroImage = `${
     import.meta.env.VITE_HERO_IMAGE_BASE_URL
   }club/hero/hero.webp`;
+
+  const cld = new Cloudinary({
+    cloud: {
+      cloudName: "dca4atadh",
+    },
+  });
 
   useEffect(() => {
     if (location.hash) {
@@ -128,9 +136,9 @@ of leisure and camaraderie."
           </div>
         </div>
         <div className="w-full flex items-center mt-10">
-          <img
-            src="/public/assets/club/history/history.png"
-            alt="alt"
+          <AdvancedImage
+            cldImg={cld.image("redwoodmanor/club/history/history.webp")}
+            alt="black and white image of a golfer."
             className="object-cover w-full h-auto"
           />
         </div>

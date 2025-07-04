@@ -10,7 +10,7 @@ function Leadership() {
       </div>
       <div className="flex flex-col md:flex-row justify-center align-middle items-center gap-4 md:gap-0 mt-6">
         <Card
-          image="public/assets/club/leadership/img1.png"
+          image="/redwoodmanor/club/leadership/img1.webp"
           title=""
           alttext="man in suit facing camera"
           body={
@@ -21,7 +21,7 @@ function Leadership() {
           bodyclassName="ml-[-16px] text-xl"
         />
         <Card
-          image="public/assets//club/leadership/img2.png"
+          image="/redwoodmanor/club/leadership/img2.webp"
           title=""
           alttext="man in suit wearing glasses looking at the camera"
           body="Thomas “Tom” Delgado<br />General Manager<br /><br />With over 20 years in luxury club management, Tom oversees daily operations with a focus on excellence, service, and member satisfaction."
@@ -30,7 +30,7 @@ function Leadership() {
           bodyclassName="ml-[-16px]] text-xl"
         />
         <Card
-          image="public/assets/club/leadership/img3.png"
+          image="/redwoodmanor/club/leadership/img3.webp"
           title=""
           alttext="woman in suit, staring at camera"
           body="Lauren kavanaugh<br />Director of Finance<br /><br />A financial strategist with a hospitality background, Lauren ensures the club’s financial health through smart, transparent reporting."
@@ -41,7 +41,7 @@ function Leadership() {
       </div>
       <div className="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-0">
         <Card
-          image="public/assets/club/leadership/img4.png"
+          image="/redwoodmanor/club/leadership/img4.webp"
           title=""
           alttext="older woman wearing white dress smiling at camera"
           body="Danielle Rivera<br />Membership Manager<br /><br />Danielle combines warmth and professionalism to welcome new members and build an inclusive community at Redwood Manor."
@@ -50,7 +50,7 @@ function Leadership() {
           bodyclassName="ml-[-16px]] text-xl"
         />
         <Card
-          image="public/assets/club/leadership/img5.png"
+          image="/redwoodmanor/club/leadership/img5.webp"
           title=""
           alttext="woman wearing light coloured suit smiling at camera, chin resting on hand"
           body="Evelyn Lee<br />Director of Facilities<br /><br />Evelyn brings engineering expertise and a passion for preservation to maintaining the club’s historic charm and modern functionality."
@@ -59,7 +59,7 @@ function Leadership() {
           bodyclassName="ml-[-16px]] text-xl"
         />
         <Card
-          image="public/assets/club/leadership/img6.png"
+          image="/redwoodmanor/club/leadership/img6.webp"
           title=""
           alttext="woman in suit smiling at camera"
           body="Simone Caldwell<br />HR Director<br /><br />Simone fosters a supportive, high-performing workplace culture through thoughtful HR leadership and staff development initiatives."

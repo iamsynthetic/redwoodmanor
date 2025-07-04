@@ -1,8 +1,5 @@
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import type { ReactNode } from "react";
-
-// import { AdvancedImage } from "@cloudinary/react";
-// import { Cloudinary } from "@cloudinary/url-gen";
 
 interface HeroProps {
   image: string;
@@ -25,60 +22,12 @@ const Hero: React.FC<HeroProps> = ({
 }) => {
   const titleRef = useRef<HTMLHeadingElement>(null);
   const bodyRef = useRef<HTMLParagraphElement>(null);
-  const overlayRef = useRef<HTMLDivElement>(null);
-
-  // const cld = new Cloudinary({
-  //   cloud: {
-  //     cloudName: "dca4atadh",
-  //   },
-  // });
-
-  // Use the image with public ID, 'front_face'.
-  // const myImage = cld.image("front_face");
-
-  useEffect(() => {
-    // Simple animations without external GSAP library
-
-    const animateElement = (
-      element: HTMLElement | null,
-      delay: number = 0
-    ): void => {
-      if (!element) return;
-
-      element.style.opacity = "0";
-      element.style.transform = "translateY(30px)";
-      element.style.transition =
-        "all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)";
-
-      setTimeout(() => {
-        element.style.opacity = "1";
-        element.style.transform = "translateY(0)";
-      }, delay);
-    };
-
-    // Animate overlay first
-    if (overlayRef.current) {
-      overlayRef.current.style.opacity = "0";
-      overlayRef.current.style.transition = "opacity 0.6s ease-out";
-      setTimeout(() => {
-        if (overlayRef.current) {
-          overlayRef.current.style.opacity = "1";
-        }
-      }, 100);
-    }
-
-    // Animate title and body with staggered delays
-    animateElement(titleRef.current, 400);
-    animateElement(bodyRef.current, 600);
-  }, []);
 
   return (
     <div
       className="relative w-full flex justify-center overflow-hidden"
       style={{ height }}
     >
-      {/* Background Image */}
-
       <div
         role="img"
         aria-label={`${alt}`}
@@ -86,24 +35,13 @@ const Hero: React.FC<HeroProps> = ({
         style={{ backgroundImage: `url(${image})` }}
       />
 
-      {/* <AdvancedImage
-        cldImg={cld.image(image)}
-        alt={alt}
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${image})` }}
-      /> */}
-
-      {/* Content Container */}
       <div className="relative z-10 text-center max-w-4xl mt-[6rem] px-3 mx-auto">
-        {/* Title */}
         <h1
           ref={titleRef}
           className={`${titlecolor} mb-6 cardoregular text-[clamp(3rem,4cqw,4rem)] max-w-xl mx-auto`}
         >
           {title}
         </h1>
-
-        {/* Body Text */}
         <p
           ref={bodyRef}
           className={`${bodyTextcolor} cardoregular font-light leading-relaxed text-xl max-w-2xl mx-auto`}

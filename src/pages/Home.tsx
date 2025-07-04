@@ -40,7 +40,7 @@ function Home() {
           el.scrollIntoView({ behavior: "smooth" });
         } else if (attempts < 20) {
           attempts++;
-          setTimeout(scrollToAnchor, 100); // Try again in 100ms
+          setTimeout(scrollToAnchor, 100);
         }
       };
       scrollToAnchor();
@@ -52,7 +52,6 @@ function Home() {
   return (
     <div>
       <Hero
-        // image="/redwoodmanor/home/hero/hero.webp"
         image={heroImage}
         alt="a large building off a body of water, there's a kayaker in the water"
         title="Welcome"

@@ -1,9 +1,11 @@
 import { Button } from "../button/Button";
 
+import { AdvancedImage } from "@cloudinary/react";
+import { Cloudinary } from "@cloudinary/url-gen";
 type CardProps = {
   image?: string;
   title?: string;
-  alttext?:string;
+  alttext?: string;
   body?: string;
   buttonText?: string;
   backgroundColor?: string;
@@ -21,8 +23,14 @@ const Card = ({
   onButtonClick,
   className = "",
   bodyclassName = "",
-  alttext="",
+  alttext = "",
 }: CardProps) => {
+  const cld = new Cloudinary({
+    cloud: {
+      cloudName: "dca4atadh",
+    },
+  });
+
   return (
     <div
       className={`${backgroundColor} overflow-hidden h-[500px] ${className}`}
@@ -30,8 +38,13 @@ const Card = ({
       {/* Image Section - Takes up half the height */}
       <div className="h-1/2 w-full">
         {image && (
-          <img
-            src={image}
+          // <img
+          //   src={image}
+          //   alt={alttext}
+          //   className="w-full h-full object-cover"
+          // />
+          <AdvancedImage
+            cldImg={cld.image(image)}
             alt={alttext}
             className="w-full h-full object-cover"
           />
@@ -51,8 +64,7 @@ const Card = ({
             <p
               className={`text-base cardoregular text-base-content mb-4 flex-grow ${bodyclassName}`}
               dangerouslySetInnerHTML={{ __html: body }}
-            >
-            </p>
+            ></p>
           )}
         </div>
         <div className="absolute bottom-0 pb-4 ">

@@ -2,7 +2,8 @@ import React, { useState, useRef, useLayoutEffect } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { Button } from "../button/Button";
-// import { useMediaQuery } from "@uidotdev/usehooks";
+import { AdvancedImage } from "@cloudinary/react";
+import { Cloudinary } from "@cloudinary/url-gen";
 
 import { useWindowSize } from "@uidotdev/usehooks";
 import { useEffect } from "react";
@@ -44,6 +45,12 @@ const ImageTextBlockalt: React.FC<ImageTextBlockProps> = ({
   const [current, setCurrent] = useState(0);
   const touchStartX = useRef<number | null>(null);
   const touchEndX = useRef<number | null>(null);
+
+  const cld = new Cloudinary({
+    cloud: {
+      cloudName: "dca4atadh",
+    },
+  });
 
   // Mouse swipe refs
   const mouseDownX = useRef<number | null>(null);
@@ -162,8 +169,8 @@ const ImageTextBlockalt: React.FC<ImageTextBlockProps> = ({
           <div ref={sliderRef} className="flex w-full flex-col">
             {imgsarray.map((item) => (
               <div key={item.id} className="flex flex-col items-end">
-                <img
-                  src={item.img}
+                <AdvancedImage
+                  cldImg={cld.image(item.img)}
                   alt={item.alt}
                   className={`object-cover lg:${maxwidth} lg:${maxheight}`}
                 />

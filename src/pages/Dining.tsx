@@ -1,7 +1,8 @@
 import steakarr from "../data/dining/steak.json";
 import burgerarr from "../data/dining/burger.json";
 import calamariarr from "../data/dining/calamari.json";
-
+import { AdvancedImage } from "@cloudinary/react";
+import { Cloudinary } from "@cloudinary/url-gen";
 import { Suspense, lazy } from "react";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
@@ -20,6 +21,16 @@ const RestaurantMenu = lazy(() => import("../features/ui/menu/Menu.jsx"));
 
 function Dining() {
   const location = useLocation();
+
+  const cld = new Cloudinary({
+    cloud: {
+      cloudName: "dca4atadh",
+    },
+  });
+
+  const heroImage = `${
+    import.meta.env.VITE_HERO_IMAGE_BASE_URL
+  }dining/hero/hero.webp`;
 
   useEffect(() => {
     if (location.hash) {
@@ -43,7 +54,7 @@ function Dining() {
   return (
     <div>
       <Hero
-        image="/public/assets/dining/hero/hero.png"
+        image={heroImage}
         alt="a burger on a plate with ketchup in a container that's been knocked over, container of french fries in the background"
         title="Dining"
         titlecolor="text-secondary"
@@ -77,8 +88,8 @@ function Dining() {
               </h3>
             </div>
             <div className="mt-10 min-w-auto max-w-[860px] flex justify-center w-full">
-              <img
-                src="/public/assets/dining/style/diningstyle.png"
+              <AdvancedImage
+                cldImg={cld.image("/redwoodmanor/dining/style/diningstyle.webp")}
                 alt="a piece of meat on the bone, being held by a pair of hands on a black background"
                 className="object-cover w-full"
               />

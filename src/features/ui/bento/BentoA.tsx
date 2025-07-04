@@ -1,5 +1,6 @@
 import { useMediaQuery } from "@uidotdev/usehooks";
-
+import { AdvancedImage } from "@cloudinary/react";
+import { Cloudinary } from "@cloudinary/url-gen";
 type BentoAProps = {
   bentoAItemArray: Array<{
     id: number;
@@ -17,14 +18,20 @@ const BentoA: React.FC<BentoAProps> = ({ bentoAItemArray = [] }) => {
   );
   const isDesktop = useMediaQuery("only screen and (min-width : 1024px)");
 
+  const cld = new Cloudinary({
+    cloud: {
+      cloudName: "dca4atadh",
+    },
+  });
+
   return (
     <div className="flex flex-col w-full justify-center items-center">
       <div className={isMobile || isTablet ? `w-full` : `hidden`}>
         <div className="grid grid-cols-1 gap-4">
           {bentoAItemArray.map((item) => (
             <div key={item.id} className="w-full">
-              <img
-                src={item.img}
+              <AdvancedImage
+                cldImg={cld.image(item.img)}
                 alt={item.alt}
                 className="w-full h-52 lg:h-72 object-cover"
               />
@@ -52,8 +59,8 @@ const BentoA: React.FC<BentoAProps> = ({ bentoAItemArray = [] }) => {
                 className={`${colSpan} group cursor-pointer overflow-hidden`}
               >
                 <div className="relative h-full">
-                  <img
-                    src={item.img}
+                  <AdvancedImage
+                    cldImg={cld.image(item.img)}
                     alt={item.alt}
                     className="w-full h-52 lg:h-72 object-cover"
                   />

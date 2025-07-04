@@ -2,61 +2,43 @@
   {
     "id": 1,
     "label": "image 1",
-    "img": "/public/assets/events/gallery/img1.png",
-    "alt": "two people holding hands, wilderness backdrop"
+    "img": "/redwoodmanor/events/gallery/img1.webp",
+    "alt": "fancy table setting with flute glasses and colourful flowers"
   },
   {
     "id": 2,
     "label": "image 2",
-    "img": "/public/assets/events/gallery/img2.png",
-    "alt": "people talking at a conference."
+    "img": "/redwoodmanor/events/gallery/img2.webp",
+    "alt": "two people embracing each other smiling at the camera"
   },
   {
     "id": 3,
     "label": "image 3",
-    "img": "/public/assets/events/gallery/img3.png",
-    "alt": "close up of two people smiling at the camera, a water fountain in in the background"
+    "img": "/redwoodmanor/events/gallery/img3.webp",
+    "alt": "a man holding a woman kissing her head, wearing a suit, the woman is wearing a wedding dress"
   },
   {
     "id": 4,
     "label": "image 4",
-    "img": "/public/assets/events/gallery/img4.png",
-    "alt": "fancy table setting with flute glasses and colourful flowers"
+    "img": "/redwoodmanor/events/gallery/img4.webp",
+    "alt": "a table arrangement with a mason jar with flowers in it sitting on a live edge block of wood"
   },
   {
     "id": 5,
     "label": "image 5",
-    "img": "/public/assets/events/gallery/img5.png",
-    "alt": "two people embracing each other smiling at the camera"
+    "img": "/redwoodmanor/events/gallery/img5.webp",
+    "alt": "a man and woman holding hands. woman is wearing a wedding dress and is looking back at the camera, in the background there is an outdoor gathering"
   },
   {
     "id": 6,
     "label": "image 6",
-    "img": "/public/assets/events/gallery/img6.png",
-    "alt": "a man holding a woman kissing her head, wearing a suit, the woman is wearing a wedding dress"
+    "img": "/redwoodmanor/events/gallery/img6.webp",
+    "alt": "people sitting on chairs facing and looking to the right during a conference "
   },
   {
     "id": 7,
     "label": "image 7",
-    "img": "/public/assets/events/gallery/img7.png",
-    "alt": "a table arrangement with a mason jar with flowers in it sitting on a live edge block of wood"
-  },
-  {
-    "id": 8,
-    "label": "image 8",
-    "img": "/public/assets/events/gallery/img8.png",
-    "alt": "a man and woman holding hands. woman is wearing a wedding dress and is looking back at the camera, in the background there is an outdoor gathering"
-  },
-  {
-    "id": 9,
-    "label": "image 9",
-    "img": "/public/assets/events/gallery/img9.png",
-    "alt": "people sitting on chairs facing and looking to the right during a conference "
-  },
-  {
-    "id": 10,
-    "label": "image 10",
-    "img": "/public/assets/events/gallery/img10.png",
+    "img": "/redwoodmanor/events/gallery/img7.webp",
     "alt": "two people getting married, people are surrounding them throwing rice, everyone is smiling"
   }
 ]

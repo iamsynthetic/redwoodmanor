@@ -1,32 +1,32 @@
 [
   {
     "id": 1,
-    "img": "/public/assets/amenities/kidsclub/img1.png",
+    "img": "/redwoodmanor/amenities/kidsclub/img1.webp",
     "alt": "kid playing with a round toy"
   },
   {
     "id": 2,
-    "img": "/public/assets/amenities/kidsclub/img2.png",
+    "img": "/redwoodmanor/amenities/kidsclub/img2.webp",
     "alt": "close up of a wood container with red paint in it"
   },
   {
     "id": 3,
-    "img": "/public/assets/amenities/kidsclub/img3.png",
+    "img": "/redwoodmanor/amenities/kidsclub/img3.webp",
     "alt": "kid about to throw a baseball"
   },
   {
     "id": 4,
-    "img": "/public/assets/amenities/kidsclub/img4.png",
+    "img": "/redwoodmanor/amenities/kidsclub/img4.webp",
     "alt": "feet and a mini putt club on an artificial grass surface near the hole"
   },
   {
     "id": 5,
-    "img": "/public/assets/amenities/kidsclub/img5.png",
+    "img": "/redwoodmanor/amenities/kidsclub/img5.webp",
     "alt": "kid sitting on a stump, a sign on it says disc golf flying objects"
   },
   {
     "id": 6,
-    "img": "/public/assets/amenities/kidsclub/img6.png",
+    "img": "/redwoodmanor/amenities/kidsclub/img6.webp",
     "alt": "open drawer full of kids toys"
   }
 ]

@@ -1,7 +1,8 @@
 import React, { useState, useRef } from "react";
 import { useMediaQuery } from "@uidotdev/usehooks";
 import { Button } from "../button/Button";
-
+import { AdvancedImage } from "@cloudinary/react";
+import { Cloudinary } from "@cloudinary/url-gen";
 interface ContentSwitcherProps {
   //   className?: string;
   //   theWidth?: string;
@@ -33,6 +34,12 @@ const ContentSwitcher: React.FC<ContentSwitcherProps> = ({
 
   //   const [current, setCurrent] = useState(0);
   const isSmallDevice = useMediaQuery("only screen and (max-width : 768px)");
+
+  const cld = new Cloudinary({
+    cloud: {
+      cloudName: "dca4atadh",
+    },
+  });
 
   // Mouse drag handlers for desktop
 
@@ -159,11 +166,16 @@ const ContentSwitcher: React.FC<ContentSwitcherProps> = ({
             >
               {/* Image */}
               <div className="w-full flex justify-center lg:h-full mb-4 sm:mb-6 lg:mb-0 rounded-2xl overflow-hidden">
-                <img
-                  src={contentItemArray[selectedItem].img}
+                <AdvancedImage
+                  cldImg={cld.image(contentItemArray[selectedItem].img)}
                   alt={contentItemArray[selectedItem].title}
                   className="h-[400px] w-[246px] object-cover hover:scale-105 transition-transform duration-700"
                 />
+                {/* <img
+                  src={contentItemArray[selectedItem].img}
+                  alt={contentItemArray[selectedItem].title}
+                  className="h-[400px] w-[246px] object-cover hover:scale-105 transition-transform duration-700"
+                /> */}
               </div>
 
               {/* Text Content */}

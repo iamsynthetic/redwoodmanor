@@ -7,7 +7,8 @@ import galleryItems from "../data/amenities/kidsclub.json";
 import { Suspense, lazy } from "react";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-
+import { AdvancedImage } from "@cloudinary/react";
+import { Cloudinary } from "@cloudinary/url-gen";
 import Hero from "../features/ui/hero/Hero";
 
 const ThePool = lazy(
@@ -26,6 +27,16 @@ const BentoA = lazy(() => import("../features/ui/bento/BentoA"));
 
 function Amenities() {
   const location = useLocation();
+
+  const cld = new Cloudinary({
+    cloud: {
+      cloudName: "dca4atadh",
+    },
+  });
+
+  const heroImage = `${
+    import.meta.env.VITE_HERO_IMAGE_BASE_URL
+  }amenities/hero/hero.webp`;
 
   useEffect(() => {
     if (location.hash) {
@@ -49,7 +60,7 @@ function Amenities() {
   return (
     <div>
       <Hero
-        image="/public/assets/amenities/hero/hero.png"
+        image={heroImage}
         alt="a large building off a body of water, used for a golf club house"
         title="Amenities"
         titlecolor="text-neutral"
@@ -83,10 +94,10 @@ function Amenities() {
               </h3>
             </div>
             <div className="mt-10 min-w-auto max-w-[860px] flex justify-center w-full">
-              <img
-                src="/public/assets/amenities/tennis/tennis.png"
+              <AdvancedImage
+                cldImg={cld.image("/redwoodmanor/amenities/tennis/tennis.webp")}
                 alt="Tennis courts at Redwood Manor showing championship-quality surfaces and professional facilities"
-                className="object-cover w-full "
+                className="object-cover w-full"
               />
             </div>
           </div>

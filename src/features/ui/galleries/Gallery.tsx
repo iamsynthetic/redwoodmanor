@@ -2,7 +2,8 @@ import React, { useState, useRef, useLayoutEffect } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { Button } from "../button/Button";
-
+import { AdvancedImage } from "@cloudinary/react";
+import { Cloudinary } from "@cloudinary/url-gen";
 gsap.registerPlugin(useGSAP);
 
 interface GalleryProps {
@@ -19,6 +20,12 @@ const Gallery: React.FC<GalleryProps> = ({
   const [current, setCurrent] = useState(0);
   const touchStartX = useRef<number | null>(null);
   const touchEndX = useRef<number | null>(null);
+
+  const cld = new Cloudinary({
+    cloud: {
+      cloudName: "dca4atadh",
+    },
+  });
 
   // Mouse swipe refs
   const mouseDownX = useRef<number | null>(null);
@@ -130,8 +137,8 @@ const Gallery: React.FC<GalleryProps> = ({
               className="w-full flex-shrink-0 flex justify-center items-center"
               style={{ width: "100%", height: "100%" }}
             >
-              <img
-                src={item.img}
+              <AdvancedImage
+                cldImg={cld.image(item.img)}
                 alt={item.alt}
                 className="object-cover w-full h-auto"
                 style={{

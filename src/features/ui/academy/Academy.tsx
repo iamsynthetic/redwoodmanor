@@ -1,8 +1,11 @@
 import Card from "../card/Card";
+import { useNavigate } from "react-router-dom";
 
 function Academy() {
-  function handleButtonClick(arg0: string): void {
-    alert(`You clicked: ${arg0}`);
+  const navigate = useNavigate();
+
+  function handleButtonClick(): void {
+    navigate("/events#contactform");
   }
 
   return (
@@ -14,31 +17,28 @@ function Academy() {
       </div>
       <div className="flex flex-col md:flex-row gap-10 md:gap-10 lg:gap-12 xl:gap-20 mt-8">
         <Card
-          image="public/assets/home/academy/lessons.png"
+          image="/redwoodmanor/home/academy/lessons.webp"
           title="Lessons"
           body="Elevate your game with personalized instruction from seasoned PGA professionals in the distinguished setting of Redwood Manor."
           buttonText="SIGN UP"
           backgroundColor="bg-secondary"
-          // className="flex-1"
-          onButtonClick={() => handleButtonClick("Mountain Adventure")}
+          onButtonClick={() => handleButtonClick()}
         />
         <Card
-          image="public/assets/home/academy/junior-lessons.png"
+          image="/redwoodmanor/home/academy/junior-lessons.webp"
           title="Junior Lessons"
           body="Inspire young talent with expert-led junior lessons that build skill and confidence, all within a supportive and refined environment."
           buttonText="SIGN UP"
           backgroundColor="bg-secondary"
-          // className="flex-1"
-          onButtonClick={() => handleButtonClick("Mountain Adventure")}
+          onButtonClick={() => handleButtonClick()}
         />
         <Card
-          image="public/assets/home/academy/clinics.png"
+          image="/redwoodmanor/home/academy/clinics.webp"
           title="Clinic"
           body="Sharpen your skills in a collaborative, small-group setting with our elite golf clinics, designed for players seeking focused instruction."
           buttonText="SIGN UP"
           backgroundColor="bg-secondary"
-          // className="flex-1"
-          onButtonClick={() => handleButtonClick("Mountain Adventure")}
+          onButtonClick={() => handleButtonClick()}
         />
       </div>
       {/* fixed size */}

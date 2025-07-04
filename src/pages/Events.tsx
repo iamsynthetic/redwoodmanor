@@ -4,11 +4,19 @@ import galleryimages from "../data/events/events-gallery.json";
 import weddingsarr from "../data/events/weddings.json";
 import corporatearr from "../data/events/corporate.json";
 
+// import HistoricTudor from "../features/ui/image-text-block/ImageTextBlock";
+// import Breathtaking from "../features/ui/image-text-block/ImageTextBlockalt";
+// import TheWeddings from "../features/ui/image-text-block/ImageTextBlock";
+// import TheCorporate from "../features/ui/image-text-block/ImageTextBlock";
+// import Eventgallery from "../features/ui/galleries/Gallery";
+// import ContactForm from "../features/ui/contact-form/contactform";
 import Hero from "../features/ui/hero/Hero";
 import { Suspense, lazy } from "react";
 import { useMediaQuery } from "@uidotdev/usehooks";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import { AdvancedImage } from "@cloudinary/react";
+import { Cloudinary } from "@cloudinary/url-gen";
 
 const HistoricTudor = lazy(
   () => import("../features/ui/image-text-block/ImageTextBlock")
@@ -39,17 +47,31 @@ function Events() {
     "only screen and (min-width : 601px) and (max-width : 1023px)"
   );
 
+  const cld = new Cloudinary({
+    cloud: {
+      cloudName: "dca4atadh",
+    },
+  });
+
+  const heroImage = `${
+    import.meta.env.VITE_HERO_IMAGE_BASE_URL
+  }/events/hero/hero.webp`;
+
   useEffect(() => {
     if (location.hash) {
       const id = location.hash.replace("#", "");
       let attempts = 0;
+      const maxAttempts = 500;
       const scrollToAnchor = () => {
         const el = document.getElementById(id);
         if (el) {
-          el.scrollIntoView({ behavior: "smooth" });
-        } else if (attempts < 20) {
+          // Give more time for layout to settle
+          setTimeout(() => {
+            el.scrollIntoView({ behavior: "smooth", block: "start" });
+          }, 300);
+        } else if (attempts < maxAttempts) {
           attempts++;
-          setTimeout(scrollToAnchor, 100); // Try again in 100ms
+          setTimeout(scrollToAnchor, 100);
         }
       };
       scrollToAnchor();
@@ -61,7 +83,9 @@ function Events() {
   return (
     <div>
       <Hero
-        image="/public/assets/events/hero/hero.png"
+        // image="/public/assets/events/hero/hero.png"
+
+        image={heroImage}
         alt="a man golfing, sand dune's in the background with the sun setting"
         title="Events"
         titlecolor="text-base-content"
@@ -191,8 +215,8 @@ function Events() {
         <section aria-labelledby="testimonial-section">
           <div className="mt-40 flex flex-col w-full justify-center items-center">
             <div className="mt-10 min-w-auto w-auto md:w-[849px] flex justify-center">
-              <img
-                src="/public/assets/events/img3.png"
+              <AdvancedImage
+                cldImg={cld.image("/redwoodmanor/events/img3.webp")}
                 alt="A golfer mid-swing on the course at Redwood Manor"
                 className="object-cover w-full"
               />
@@ -284,8 +308,7 @@ function Events() {
             />
           </Suspense>
         </section>
-
-        <section id="contact-form" aria-labelledby="booking-heading">
+        <section id="contactform" aria-labelledby="booking-heading">
           <div className="mt-40 flex flex-col w-full">
             <h2
               id="booking-heading"
