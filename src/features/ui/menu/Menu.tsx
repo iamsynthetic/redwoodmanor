@@ -26,7 +26,7 @@ const Menu = () => {
     <>
       <div className="flex flex-col w-full justify-center items-center">
         <div className="mt-64">
-          <h2 className="montserratlight text-7xl md:text-8xl text-base-content text-left md:text-center">
+          <h2 className="montserratlight text-5xl md:text-8xl text-base-content text-left md:text-center">
             Our Menu
           </h2>
         </div>
