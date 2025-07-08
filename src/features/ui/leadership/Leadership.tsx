@@ -27,7 +27,7 @@ function Leadership() {
           body="Thomas “Tom” Delgado<br />General Manager<br /><br />With over 20 years in luxury club management, Tom oversees daily operations with a focus on excellence, service, and member satisfaction."
           backgroundColor="bg-base"
           className="w-[391px] h-full mr-2 lg:mr-20"
-          bodyclassName="ml-[-16px]] text-xl"
+          bodyclassName="ml-[-16px] text-xl"
         />
         <Card
           image="/redwoodmanor/club/leadership/img3.webp"
@@ -36,7 +36,7 @@ function Leadership() {
           body="Lauren kavanaugh<br />Director of Finance<br /><br />A financial strategist with a hospitality background, Lauren ensures the club’s financial health through smart, transparent reporting."
           backgroundColor="bg-base"
           className="w-[391px] h-full"
-          bodyclassName="ml-[-16px]] text-xl"
+          bodyclassName="ml-[-16px] text-xl"
         />
       </div>
       <div className="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-0">
@@ -47,7 +47,7 @@ function Leadership() {
           body="Danielle Rivera<br />Membership Manager<br /><br />Danielle combines warmth and professionalism to welcome new members and build an inclusive community at Redwood Manor."
           backgroundColor="bg-base"
           className="w-[391px] h-full mr-2 lg:mr-20"
-          bodyclassName="ml-[-16px]] text-xl"
+          bodyclassName="ml-[-16px] text-xl"
         />
         <Card
           image="/redwoodmanor/club/leadership/img5.webp"
@@ -56,7 +56,7 @@ function Leadership() {
           body="Evelyn Lee<br />Director of Facilities<br /><br />Evelyn brings engineering expertise and a passion for preservation to maintaining the club’s historic charm and modern functionality."
           backgroundColor="bg-base"
           className="w-[391px] h-full mr-2 lg:mr-20"
-          bodyclassName="ml-[-16px]] text-xl"
+          bodyclassName="ml-[-16px] text-xl"
         />
         <Card
           image="/redwoodmanor/club/leadership/img6.webp"
@@ -65,7 +65,7 @@ function Leadership() {
           body="Simone Caldwell<br />HR Director<br /><br />Simone fosters a supportive, high-performing workplace culture through thoughtful HR leadership and staff development initiatives."
           backgroundColor="bg-base"
           className="w-[391px] h-full"
-          bodyclassName="ml-[-16px]] text-xl"
+          bodyclassName="ml-[-16px] text-xl"
         />
       </div>
     </div>

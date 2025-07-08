@@ -89,7 +89,9 @@ function Dining() {
             </div>
             <div className="mt-10 min-w-auto max-w-[860px] flex justify-center w-full">
               <AdvancedImage
-                cldImg={cld.image("/redwoodmanor/dining/style/diningstyle.webp")}
+                cldImg={cld.image(
+                  "/redwoodmanor/dining/style/diningstyle.webp"
+                )}
                 alt="a piece of meat on the bone, being held by a pair of hands on a black background"
                 className="object-cover w-full"
               />
@@ -112,7 +114,7 @@ function Dining() {
         </div>
       </section>
 
-      <section aria-labelledby="steak-heading">
+      <section className="mt-20 md:mt-0" aria-labelledby="steak-heading">
         <Suspense
           fallback={<div aria-live="polite">Steak section is loading...</div>}
         >
@@ -123,13 +125,14 @@ function Dining() {
             justifytext="justify-center"
             textwidth="md:w-3/5"
             thetitle="AAA Tenderloin"
+            titleClassName="montserratlight text-3xl md:text-4xl"
             thecontent={steakarr[0]?.thetext}
             aria-label="AAA Tenderloin dish details and presentation"
           />
         </Suspense>
       </section>
 
-      <section aria-labelledby="burger-heading">
+      <section className="mt-20 md:mt-0" aria-labelledby="burger-heading">
         <Suspense
           fallback={<div aria-live="polite">Burger section is loading...</div>}
         >
@@ -140,13 +143,14 @@ function Dining() {
             justifytext="justify-center"
             textwidth="md:w-3/5"
             thetitle="Banquet Burger"
+            titleClassName="montserratlight text-3xl md:text-4xl"
             thecontent={burgerarr[0]?.thetext}
             aria-label="Banquet Burger dish details and presentation"
           />
         </Suspense>
       </section>
 
-      <section aria-labelledby="calamari-heading">
+      <section className="mt-20 md:mt-0" aria-labelledby="calamari-heading">
         <Suspense
           fallback={
             <div aria-live="polite">Calamari section is loading...</div>
@@ -159,6 +163,7 @@ function Dining() {
             textwidth="md:w-3/5"
             justifytext="justify-center"
             thetitle="Crispy Calamari"
+            titleClassName="montserratlight text-3xl md:text-4xl"
             thecontent={calamariarr[0]?.thetext}
             aria-label="Crispy Calamari dish details and presentation"
           />
@@ -179,7 +184,7 @@ function Dining() {
       >
         <h2
           id="hours-heading"
-          className="montserratlight text-7xl md:text-8xl text-base-content text-left"
+          className="montserratlight text-5xl md:text-8xl text-base-content text-left"
         >
           Dining Hours & Information
         </h2>

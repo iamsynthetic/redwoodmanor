@@ -19,7 +19,7 @@ const SlideCard = ({
 }: SlideProps) => {
   return (
     <div
-      className={`order-1 md:order-1 col-span-12 md:col-span-6 lg:col-span-6 xl:col-span-6 relative w-[360px] md:w-[500px] h-[320px] ${bgcolor}`}
+      className={`order-1 md:order-1 col-span-12 md:col-span-6 lg:col-span-6 xl:col-span-6 relative w-[330px] md:w-[500px] h-[320px] ${bgcolor}`}
     >
       <div className="flex flex-col md:flex-row w-full h-full md:pl-10 pt-10 md:text-left">
         <div className="mt-2 md:mt-0">

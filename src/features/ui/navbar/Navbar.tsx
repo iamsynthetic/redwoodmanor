@@ -157,7 +157,6 @@ const Navbar = ({ menuBgColor = "#333" }) => {
           </Button>
           <img
             src={logoimage}
-            // src="/public/assets/home/logo.png"
             alt="Company logo"
             className={`${styles.imglogo}`}
           />
@@ -182,7 +181,7 @@ const Navbar = ({ menuBgColor = "#333" }) => {
           }
         >
           <img
-            src="/public/assets/home/logo.png"
+            src={logoimage}
             alt="Company logo"
             className={`${styles.imglogo}`}
           />

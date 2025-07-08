@@ -36,7 +36,7 @@ const ImageTextBlock: React.FC<ImageTextBlockProps> = ({
   thecontent = "",
   textwidth = "w-full md:w-3/7",
   aspectratio = "aspect-square",
-  maxheight = "max-h-[600px]",
+  maxheight = "max-h-[1000px] md:max-h-[600px]",
   maxwidth = "w-full",
 }) => {
   const wsize = useWindowSize();
@@ -152,7 +152,7 @@ const ImageTextBlock: React.FC<ImageTextBlockProps> = ({
   return (
     <div className={`${className} flex flex-col`}>
       <div
-        className={`flex flex-col md:flex-row w-full max-h-[600px] md:gap-10`}
+        className={`flex flex-col md:flex-row w-full ${maxheight} md:gap-10`}
         style={{ padding: 0 }}
         onTouchStart={onTouchStart}
         onTouchMove={onTouchMove}
@@ -171,11 +171,15 @@ const ImageTextBlock: React.FC<ImageTextBlockProps> = ({
               <div
                 key={item.id}
                 className="flex-shrink-0 flex justify-center w-full"
+                // className="h=[900px] bg-blue-200"
               >
                 <AdvancedImage
                   cldImg={cld.image(item.img)}
                   alt={item.alt}
+                  // className="h=[900px] w-[100px] bg-blue-200"
                   className="object-cover w-full"
+
+                  // className="h-52 lg:h-72 object-cover bg-blue-200"
                 />
               </div>
             ))}

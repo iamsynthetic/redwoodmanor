@@ -22,7 +22,6 @@ function TheClub() {
   const isTablet = useMediaQuery(
     "only screen and (min-width : 601px) and (max-width : 1023px)"
   );
-  // const isDesktop = useMediaQuery("only screen and (min-width : 1024px)");
   const heroImage = `${
     import.meta.env.VITE_HERO_IMAGE_BASE_URL
   }club/hero/hero.webp`;
@@ -43,7 +42,7 @@ function TheClub() {
           el.scrollIntoView({ behavior: "smooth" });
         } else if (attempts < 20) {
           attempts++;
-          setTimeout(scrollToAnchor, 100); // Try again in 100ms
+          setTimeout(scrollToAnchor, 100);
         }
       };
       scrollToAnchor();
