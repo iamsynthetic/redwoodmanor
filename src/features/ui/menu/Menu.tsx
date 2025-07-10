@@ -43,8 +43,6 @@ const Menu = () => {
               : ""
           }`}
           onClick={() => setSelectedMenu("breakfast")}
-          // disabledHover={selectedMenu === "breakfast"}
-          // disabled={selectedMenu === "breakfast"}
         >
           Breakfast
         </Button>
@@ -58,8 +56,6 @@ const Menu = () => {
               : ""
           }`}
           onClick={() => setSelectedMenu("lunch")}
-          // disabledHover={selectedMenu === "lunch"}
-          // disabled={selectedMenu === "lunch"}
         >
           Lunch
         </Button>
@@ -73,8 +69,6 @@ const Menu = () => {
               : ""
           }`}
           onClick={() => setSelectedMenu("dinner")}
-          // disabledHover={selectedMenu === "dinner"}
-          // disabled={selectedMenu === "dinner"}
         >
           Dinner
         </Button>

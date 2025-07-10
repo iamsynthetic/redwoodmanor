@@ -48,7 +48,7 @@ function Amenities() {
           el.scrollIntoView({ behavior: "smooth" });
         } else if (attempts < 20) {
           attempts++;
-          setTimeout(scrollToAnchor, 100); // Try again in 100ms
+          setTimeout(scrollToAnchor, 100);
         }
       };
       scrollToAnchor();

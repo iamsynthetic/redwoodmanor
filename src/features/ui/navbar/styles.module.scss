@@ -30,7 +30,6 @@
 .close-btn {
   width: 3rem;
   height: 3rem;
-  // padding-bottom: 100%;
   border-radius: 50%;
   overflow: hidden;
 
@@ -40,15 +39,8 @@
   cursor: pointer;
 }
 .imglogo {
-  // width: 15%;
-  // height: 15%;
-  // min-width: 21%;
-  // max-width:21%;
-  // max-height: 21%;
-  // min-height: 21%;
   width: 220px;
   height: auto;
-  // object-fit: cover;
 }
 
 .logo {
@@ -58,7 +50,6 @@
   flex: 1;
 }
 
-/* Fullscreen menu overlay */
 .menuoverlay {
   position: fixed;
   top: 0;
@@ -88,8 +79,6 @@
   align-self: flex-end;
   font-size: 2rem;
 }
-
-/* Mobile styles */
 @media (max-width: 768px) {
   .navbartop {
     flex-direction: column;

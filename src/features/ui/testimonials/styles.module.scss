@@ -1,10 +1,10 @@
 /*---------------------------------- colors ----------------------------------*/
 
-$colordark: #1c0221; /* hex */
-$colorgreen: #43c59e; /* hex */
-$colorpink: #ff9fa7; /* hex */
-$colorblue: #77c2f3; /* hex */
-$colorlight: #fff6e8; /* hex */
+$colordark: #1c0221;
+$colorgreen: #43c59e;
+$colorpink: #ff9fa7;
+$colorblue: #77c2f3;
+$colorlight: #fff6e8;
 $bg-colordark: rgba($colordark, 1);
 $bg-colorgreen: rgba($colorgreen, 1);
 $bg-colorpink: rgba($colorpink, 1);
@@ -31,7 +31,6 @@ $bg-colorlight: rgba($colorlight, 1);
   font-weight: 400;
   font-style: normal;
   white-space: nowrap;
-  // filter: drop-shadow(4px 3px 0px rgba(28, 2, 33, 0.4));
 }
 
 .pretitlecopy {

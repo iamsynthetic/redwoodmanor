@@ -7,37 +7,37 @@ gsap.registerPlugin(useGSAP);
 interface ButtonProps {
   backgroundColor?: string;
   hoverColor?: string;
-  textColor?: string; // Added for text color control
+  textColor?: string;
   children: React.ReactNode;
   onClick?: () => void;
   onEnter?: () => void;
   onLeave?: () => void;
   disabled?: boolean;
-  disabledHover?: boolean; // <-- Added this line
+  disabledHover?: boolean;
   theclassName?: string;
 }
 
 export const Button: React.FC<ButtonProps> = ({
-  backgroundColor = "#3498db", // Default blue background
-  hoverColor = "#ffffff", // Default white hover background
-  textColor = "#ffffff", // Default white text
+  backgroundColor = "#3498db",
+  hoverColor = "#ffffff",
+  textColor = "#ffffff",
   children,
   onClick,
   onEnter,
   onLeave,
   disabled = false,
-  disabledHover = false, // <-- Added this line
+  disabledHover = false,
   theclassName = "",
 }) => {
   const buttonRef = useRef<HTMLButtonElement>(null);
 
   const handleMouseEnter = () => {
-    if (disabled || disabledHover) return; // <-- Updated this line
+    if (disabled || disabledHover) return;
     if (disabled) return;
     if (buttonRef.current) {
       gsap.to(buttonRef.current, {
         backgroundColor: hoverColor,
-        color: backgroundColor, // Text color becomes the original background color
+        color: backgroundColor,
         duration: 0.3,
         ease: "Quint.easeOut",
       });
@@ -46,12 +46,12 @@ export const Button: React.FC<ButtonProps> = ({
   };
 
   const handleMouseLeave = () => {
-    if (disabled || disabledHover) return; // <-- Updated this line
+    if (disabled || disabledHover) return;
     if (disabled) return;
     if (buttonRef.current) {
       gsap.to(buttonRef.current, {
         backgroundColor: backgroundColor,
-        color: textColor, // Text color returns to original
+        color: textColor,
         duration: 0.3,
         ease: "Quint.easeOut",
       });
@@ -59,13 +59,7 @@ export const Button: React.FC<ButtonProps> = ({
     onLeave?.();
   };
 
-  // useEffect(() => {
-  //   console.log("disabled is: " + disabled);
-  // }, [disabled]);
   const handleClick = () => {
-    // if (disabled) {
-    //   return;
-    // }
     onClick?.();
   };
 
@@ -81,7 +75,6 @@ export const Button: React.FC<ButtonProps> = ({
         backgroundColor,
         color: textColor,
         border: `0px`,
-        // border: `2px solid ${backgroundColor}`, // Added border to maintain button structure
       }}
     >
       {children}

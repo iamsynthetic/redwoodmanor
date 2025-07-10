@@ -27,7 +27,6 @@ const LunchMenu = () => {
               </h3>
             </div>
 
-            {/* Menu items */}
             <div className="space-y-6">
               {category.items.map((item: LunchItem, index: number) => (
                 <div key={index} className="grid grid-cols-12 gap-4">

@@ -9,7 +9,7 @@ interface HeroProps {
   bodyText: string;
   bodyTextcolor?: string;
   height: string;
-  placeholder?:string;
+  placeholder?: string;
 }
 
 import { useState } from "react";
@@ -22,7 +22,7 @@ const Hero: React.FC<HeroProps> = ({
   bodyText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In efficitur cursus nec quis vestibulum justo porta ut. Praesent vel ante sollicitudin, venenatis ipsum sit cursus justo. Sed finibus laoreet nulla vel aliquet.",
   bodyTextcolor = "text-primary",
   height = "100vh",
-  placeholder = "/placeholder-blur.jpg"
+  placeholder = "/placeholder-blur.jpg",
 }) => {
   const [loaded, setLoaded] = useState(false);
   const titleRef = useRef<HTMLHeadingElement>(null);
@@ -33,7 +33,6 @@ const Hero: React.FC<HeroProps> = ({
       className="relative w-full flex justify-center overflow-hidden"
       style={{ height }}
     >
-      {/* Placeholder image (blurred) */}
       <img
         src={placeholder}
         alt=""

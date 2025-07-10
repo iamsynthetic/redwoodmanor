@@ -27,15 +27,12 @@ const Gallery: React.FC<GalleryProps> = ({
     },
   });
 
-  // Mouse swipe refs
   const mouseDownX = useRef<number | null>(null);
   const mouseUpX = useRef<number | null>(null);
   const isMouseDown = useRef<boolean>(false);
 
-  // Ref for the slider container
   const sliderRef = useRef<HTMLDivElement>(null);
 
-  // Animate with GSAP on current change
   useLayoutEffect(() => {
     if (sliderRef.current) {
       gsap.to(sliderRef.current, {
@@ -54,7 +51,6 @@ const Gallery: React.FC<GalleryProps> = ({
     setCurrent((prev) => (prev === imgsarray.length - 1 ? 0 : prev + 1));
   };
 
-  // Swipe handlers
   const onTouchStart = (e: React.TouchEvent) => {
     touchStartX.current = e.changedTouches[0].clientX;
   };
@@ -76,7 +72,6 @@ const Gallery: React.FC<GalleryProps> = ({
     touchEndX.current = null;
   };
 
-  // Mouse swipe handlers
   const onMouseDown = (e: React.MouseEvent) => {
     isMouseDown.current = true;
     mouseDownX.current = e.clientX;

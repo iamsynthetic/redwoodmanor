@@ -51,18 +51,12 @@ const ImageTextBlock: React.FC<ImageTextBlockProps> = ({
       cloudName: "dca4atadh",
     },
   });
-
-  // Mouse swipe refs
   const mouseDownX = useRef<number | null>(null);
   const mouseUpX = useRef<number | null>(null);
   const isMouseDown = useRef<boolean>(false);
-
-  // Ref for the slider container
   const sliderRef = useRef<HTMLDivElement>(null);
-  // Ref for the image container to get its width
   const imageContainerRef = useRef<HTMLDivElement>(null);
 
-  // Animate with GSAP on current change
   useLayoutEffect(() => {
     if (sliderRef.current && imageContainerRef.current) {
       const containerWidth = imageContainerRef.current.offsetWidth;
@@ -72,7 +66,7 @@ const ImageTextBlock: React.FC<ImageTextBlockProps> = ({
         ease: "Expo.easeInOut",
       });
     }
-  }, [current, wsize.width]); // Added wsize.width to recalculate on resize
+  }, [current, wsize.width]);
 
   const handlePrev = () => {
     setCurrent((prev) => (prev === 0 ? imgsarray.length - 1 : prev - 1));
@@ -82,7 +76,6 @@ const ImageTextBlock: React.FC<ImageTextBlockProps> = ({
     setCurrent((prev) => (prev === imgsarray.length - 1 ? 0 : prev + 1));
   };
 
-  // Swipe handlers
   const onTouchStart = (e: React.TouchEvent) => {
     touchStartX.current = e.changedTouches[0].clientX;
   };
@@ -104,7 +97,6 @@ const ImageTextBlock: React.FC<ImageTextBlockProps> = ({
     touchEndX.current = null;
   };
 
-  // Mouse swipe handlers
   const onMouseDown = (e: React.MouseEvent) => {
     isMouseDown.current = true;
     mouseDownX.current = e.clientX;
@@ -171,15 +163,11 @@ const ImageTextBlock: React.FC<ImageTextBlockProps> = ({
               <div
                 key={item.id}
                 className="flex-shrink-0 flex justify-center w-full"
-                // className="h=[900px] bg-blue-200"
               >
                 <AdvancedImage
                   cldImg={cld.image(item.img)}
                   alt={item.alt}
-                  // className="h=[900px] w-[100px] bg-blue-200"
                   className="object-cover w-full"
-
-                  // className="h-52 lg:h-72 object-cover bg-blue-200"
                 />
               </div>
             ))}

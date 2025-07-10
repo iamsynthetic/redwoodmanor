@@ -4,10 +4,6 @@ import { Button } from "../button/Button";
 import { AdvancedImage } from "@cloudinary/react";
 import { Cloudinary } from "@cloudinary/url-gen";
 interface ContentSwitcherProps {
-  //   className?: string;
-  //   theWidth?: string;
-  //   textLeft?: boolean;
-
   className?: string;
   sectiontitle: string;
   contentItemArray: Array<{
@@ -31,8 +27,6 @@ const ContentSwitcher: React.FC<ContentSwitcherProps> = ({
   const [startY, setStartY] = useState(0);
   const [scrollTop, setScrollTop] = useState(0);
   const scrollRef = useRef<HTMLDivElement>(null);
-
-  //   const [current, setCurrent] = useState(0);
   const isSmallDevice = useMediaQuery("only screen and (max-width : 768px)");
 
   const cld = new Cloudinary({
@@ -40,8 +34,6 @@ const ContentSwitcher: React.FC<ContentSwitcherProps> = ({
       cloudName: "dca4atadh",
     },
   });
-
-  // Mouse drag handlers for desktop
 
   const handleMouseDown = (
     e: React.MouseEvent<HTMLDivElement, MouseEvent>
@@ -66,7 +58,6 @@ const ContentSwitcher: React.FC<ContentSwitcherProps> = ({
     setIsDragging(false);
   };
 
-  // Touch handlers for mobile
   const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>): void => {
     setStartY(e.touches[0].clientY);
     if (scrollRef.current) {
@@ -82,18 +73,13 @@ const ContentSwitcher: React.FC<ContentSwitcherProps> = ({
     }
   };
 
-  // Navigation for mobile
-
   const handlePrev = () => {
-    // setCurrent((prev) => (prev === 0 ? contentItemArray.length - 1 : prev - 1));
     setSelectedItem((prev) =>
       prev === 0 ? contentItemArray.length - 1 : prev - 1
     );
-    // setSelectedItem(selectedItem - 1)}
   };
 
   const handleNext = () => {
-    // setCurrent((prev) => (prev === contentItemArray.length - 1 ? 0 : prev + 1));
     setSelectedItem((prev) =>
       prev === contentItemArray.length - 1 ? 0 : prev + 1
     );
@@ -107,8 +93,6 @@ const ContentSwitcher: React.FC<ContentSwitcherProps> = ({
         </h2>
       </div>
       <div className={`flex flex-row`}>
-        {/* Vertical List - Always visible */}
-
         <div
           className={
             isSmallDevice ? "hidden" : "visible w-64 sm:w-80 flex-shrink-0"
@@ -118,7 +102,7 @@ const ContentSwitcher: React.FC<ContentSwitcherProps> = ({
             ref={scrollRef}
             className="overflow-y-auto select-none"
             style={{
-              height: "400px", // Fixed height to force scrollbar
+              height: "400px",
               scrollbarWidth: "thin",
               scrollbarColor: "#931621",
               msScrollbarTrackColor: "#931621",
@@ -150,41 +134,32 @@ const ContentSwitcher: React.FC<ContentSwitcherProps> = ({
           </div>
         </div>
 
-        {/* Content Display Area */}
         <div
           className="flex-1 overflow-hidden"
           aria-labelledby="content-switcher-title"
         >
           <div className="h-full p-4 sm:p-6 lg:p-12">
             <div
-              key={selectedItem} // This forces re-render and triggers animation
+              key={selectedItem}
               className="h-full flex flex-col lg:grid lg:grid-cols-2 lg:gap-8 animate-fade-in"
               role="tabpanel"
               id={`content-panel-${selectedItem}`}
               aria-labelledby={`tab-${selectedItem}`}
               aria-live="polite"
             >
-              {/* Image */}
               <div className="w-full flex justify-center lg:h-full mb-4 sm:mb-6 lg:mb-0 rounded-2xl overflow-hidden">
                 <AdvancedImage
                   cldImg={cld.image(contentItemArray[selectedItem].img)}
                   alt={contentItemArray[selectedItem].title}
                   className="h-[400px] w-[246px] object-cover hover:scale-105 transition-transform duration-700"
                 />
-                {/* <img
-                  src={contentItemArray[selectedItem].img}
-                  alt={contentItemArray[selectedItem].title}
-                  className="h-[400px] w-[246px] object-cover hover:scale-105 transition-transform duration-700"
-                /> */}
               </div>
 
-              {/* Text Content */}
               <div className="flex flex-col space-y-1 animate-slide-in-right">
                 <div className="animate-slide-down">
                   <h1 className="text-3xl montserratlight text-base-content mb-1">
                     {contentItemArray[selectedItem].title}
                   </h1>
-                  {/* <div className="w-16 sm:w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mb-4 sm:mb-6 animate-expand"></div> */}
                 </div>
 
                 <p

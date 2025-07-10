@@ -15,8 +15,6 @@ const Slider: React.FC<SliderProps> = ({
   visibleCount = 1,
   totalamount = 1,
 }) => {
-
-  // Set your slide width and gap in px
   const slidePxWidth = 516;
   const slideGap = 10;
 
@@ -41,15 +39,12 @@ const Slider: React.FC<SliderProps> = ({
 
   const handlePrev = () => {
     if (currentIndex > 0) slideToIndex(currentIndex - 1);
-    // setCurrent((prev) => (prev === 0 ? imgsarray.length - 1 : prev - 1));
   };
 
   const handleNext = () => {
     if (currentIndex < totalSlides - visibleCount)
       slideToIndex(currentIndex + 1);
   };
-
-  // Enable swipe with mouse and touch
   const handlers = useSwipeable({
     onSwipedLeft: () => {
       if (currentIndex < totalSlides - visibleCount) {
@@ -61,8 +56,8 @@ const Slider: React.FC<SliderProps> = ({
         slideToIndex(currentIndex - 1);
       }
     },
-    trackMouse: true, // enables mouse swipe
-    trackTouch: true, // enables touch swipe (default)
+    trackMouse: true,
+    trackTouch: true,
     preventScrollOnSwipe: true,
   });
 

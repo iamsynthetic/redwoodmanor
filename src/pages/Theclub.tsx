@@ -54,9 +54,6 @@ function TheClub() {
   return (
     <div>
       <Hero
-        // image="/public/assets/club/hero/hero.png"
-        // image="/redwoodmanor/club/hero/hero.webp"
-
         image={heroImage}
         alt="a man golfing, sand dune's in the background with the sun setting"
         title="The Club"
@@ -75,7 +72,6 @@ of leisure and camaraderie."
         className="flex flex-row justify-start md:justify-end w-full"
         aria-labelledby="club-intro-heading"
       >
-        {/* <div className="flex w-full md:w-3/7"/> */}
         <div className={isTablet || isMobile ? `hidden` : `w-3/7`} />
         <div className="flex flex-col md:flex-row w-full gap-10">
           <div className="mt-10 pl-0 md:pl-7">

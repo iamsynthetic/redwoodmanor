@@ -2,7 +2,7 @@ import { useState, useRef, useEffect, useCallback } from "react";
 
 const ReviewCards = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [stackedCards, setStackedCards] = useState([0]); // Track which cards are in the stack
+  const [stackedCards, setStackedCards] = useState([0]);
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   const cardData = [
@@ -48,25 +48,22 @@ const ReviewCards = () => {
     },
   ];
 
-  // Configuration for positioning
   const cardConfig = {
-    basePosition: 0, // Base card position
-    previewGap: 600, // Gap between stack and preview card
-    stackOverlap: 0.8, // 80% overlap for stacked cards
-    offScreenPosition: 1000, // Position for hidden cards
+    basePosition: 0,
+    previewGap: 600,
+    stackOverlap: 0.8,
+    offScreenPosition: 1000,
   };
 
   const initializeCards = useCallback(() => {
     if (!window.gsap) return;
 
-    // Card 0: Fully visible (base card - never moves)
     window.gsap.set(cardRefs.current[0], {
       x: cardConfig.basePosition,
       opacity: 1,
       zIndex: 1,
     });
 
-    // Card 1: Partially visible with proper gap from stack
     if (cardRefs.current[1]) {
       window.gsap.set(cardRefs.current[1], {
         x: cardConfig.previewGap,
@@ -75,7 +72,6 @@ const ReviewCards = () => {
       });
     }
 
-    // All other cards: Hidden off-screen with proper z-index
     cardRefs.current.slice(2).forEach((card, index) => {
       if (card) {
         window.gsap.set(card, {
@@ -104,12 +100,8 @@ const ReviewCards = () => {
   }, [initializeCards]);
 
   const getStackPosition = (cardIndex: number): number => {
-    // Calculate position based on progressive 80% overlap
-    // Each stacked card is positioned at 80% of the previous card's position
-    const cardWidth = 600; // Width of each card
+    const cardWidth = 600;
     let position = cardConfig.basePosition;
-
-    // For each card in the stack, calculate its position as 80% of the previous card
     for (let i = 1; i <= stackedCards.indexOf(cardIndex); i++) {
       position = position + cardWidth * cardConfig.stackOverlap;
     }
@@ -124,10 +116,8 @@ const ReviewCards = () => {
     const cardToStack = nextIndex;
     const newPreviewCard = nextIndex + 1;
 
-    // Calculate the dynamic stack position (80% overlap)
     const stackPosition = getStackPosition(cardToStack);
 
-    // Move the current preview card to stack with 80% overlap
     window.gsap.to(cardRefs.current[cardToStack], {
       x: stackPosition,
       opacity: 1,
@@ -135,7 +125,6 @@ const ReviewCards = () => {
       ease: "power2.out",
     });
 
-    // Bring in next card to preview position (if exists)
     if (newPreviewCard < cardData.length) {
       window.gsap.fromTo(
         cardRefs.current[newPreviewCard],
@@ -163,7 +152,6 @@ const ReviewCards = () => {
     const newStackedCards = stackedCards.slice(0, -1);
     const cardThatWillBePreview = currentIndex + 1;
 
-    // Move the top stacked card back to preview position
     window.gsap.to(cardRefs.current[topCard], {
       x: cardConfig.previewGap,
       opacity: 1,
@@ -171,7 +159,6 @@ const ReviewCards = () => {
       ease: "power2.out",
     });
 
-    // Hide the card that was in preview position
     if (cardThatWillBePreview < cardData.length) {
       window.gsap.to(cardRefs.current[cardThatWillBePreview], {
         x: cardConfig.offScreenPosition,

@@ -35,14 +35,8 @@ const Card = ({
     <div
       className={`${backgroundColor} overflow-hidden h-[500px] ${className}`}
     >
-      {/* Image Section - Takes up half the height */}
       <div className="h-1/2 w-full">
         {image && (
-          // <img
-          //   src={image}
-          //   alt={alttext}
-          //   className="w-full h-full object-cover"
-          // />
           <AdvancedImage
             cldImg={cld.image(image)}
             alt={alttext}
@@ -51,7 +45,6 @@ const Card = ({
         )}
       </div>
 
-      {/* Content Section - Takes up the other half */}
       <div className="p-4 flex flex-col relative h-1/2">
         <div>
           {title && (

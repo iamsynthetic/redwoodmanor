@@ -41,36 +41,6 @@ function Academy() {
           onButtonClick={() => handleButtonClick()}
         />
       </div>
-      {/* fixed size */}
-      {/* <div className="flex flex-col md:flex-row md:justify-between gap-4 md:gap-0">
-          <Card
-            image="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=200&fit=crop"
-            title="Mountain Adventure"
-            body="Discover breathtaking mountain landscapes and embark on unforgettable hiking adventures. Experience nature at its finest with stunning views and fresh mountain air."
-            buttonText="Explore Now"
-            backgroundColor="bg-secondary"
-            className="w-[379px]"
-            onButtonClick={() => handleButtonClick("Mountain Adventure")}
-          />
-          <Card
-            image="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=200&fit=crop"
-            title="Mountain Adventure"
-            body="Discover breathtaking mountain landscapes and embark on unforgettable hiking adventures. Experience nature at its finest with stunning views and fresh mountain air."
-            buttonText="Explore Now"
-            backgroundColor="bg-secondary"
-            className="w-[379px]"
-            onButtonClick={() => handleButtonClick("Mountain Adventure")}
-          />
-          <Card
-            image="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=200&fit=crop"
-            title="Mountain Adventure"
-            body="Discover breathtaking mountain landscapes and embark on unforgettable hiking adventures. Experience nature at its finest with stunning views and fresh mountain air."
-            buttonText="Explore Now"
-            backgroundColor="bg-secondary"
-            className="w-[379px]"
-            onButtonClick={() => handleButtonClick("Mountain Adventure")}
-          />
-        </div> */}
     </div>
   );
 }

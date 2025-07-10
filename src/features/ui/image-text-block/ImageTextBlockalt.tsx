@@ -52,17 +52,12 @@ const ImageTextBlockalt: React.FC<ImageTextBlockProps> = ({
     },
   });
 
-  // Mouse swipe refs
   const mouseDownX = useRef<number | null>(null);
   const mouseUpX = useRef<number | null>(null);
   const isMouseDown = useRef<boolean>(false);
-
-  // Ref for the slider container
   const sliderRef = useRef<HTMLDivElement>(null);
-  // Ref for the image container to get its width
   const imageContainerRef = useRef<HTMLDivElement>(null);
 
-  // Animate with GSAP on current change
   useLayoutEffect(() => {
     if (sliderRef.current && imageContainerRef.current) {
       const containerWidth = imageContainerRef.current.offsetWidth;
@@ -72,7 +67,7 @@ const ImageTextBlockalt: React.FC<ImageTextBlockProps> = ({
         ease: "Expo.easeInOut",
       });
     }
-  }, [current, wsize.width]); // Added wsize.width to recalculate on resize
+  }, [current, wsize.width]);
 
   const handlePrev = () => {
     setCurrent((prev) => (prev === 0 ? imgsarray.length - 1 : prev - 1));
@@ -81,8 +76,6 @@ const ImageTextBlockalt: React.FC<ImageTextBlockProps> = ({
   const handleNext = () => {
     setCurrent((prev) => (prev === imgsarray.length - 1 ? 0 : prev + 1));
   };
-
-  // Swipe handlers
   const onTouchStart = (e: React.TouchEvent) => {
     touchStartX.current = e.changedTouches[0].clientX;
   };
@@ -104,7 +97,6 @@ const ImageTextBlockalt: React.FC<ImageTextBlockProps> = ({
     touchEndX.current = null;
   };
 
-  // Mouse swipe handlers
   const onMouseDown = (e: React.MouseEvent) => {
     isMouseDown.current = true;
     mouseDownX.current = e.clientX;

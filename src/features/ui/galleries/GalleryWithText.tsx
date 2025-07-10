@@ -2,7 +2,6 @@ import React, { useState, useRef, useLayoutEffect } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { Button } from "../button/Button";
-// import { useMediaQuery } from "@uidotdev/usehooks";
 
 import { useWindowSize } from "@uidotdev/usehooks";
 import { useEffect } from "react";
@@ -31,17 +30,14 @@ export const GalleryWithText: React.FC<GalleryWithTextProps> = ({
   const touchStartX = useRef<number | null>(null);
   const touchEndX = useRef<number | null>(null);
 
-  // Mouse swipe refs
   const mouseDownX = useRef<number | null>(null);
   const mouseUpX = useRef<number | null>(null);
   const isMouseDown = useRef<boolean>(false);
 
-  // Ref for the slider container
   const sliderRef = useRef<HTMLDivElement>(null);
-  // Ref for the image container to get its width
+
   const imageContainerRef = useRef<HTMLDivElement>(null);
 
-  // Animate with GSAP on current change
   useLayoutEffect(() => {
     if (sliderRef.current && imageContainerRef.current) {
       const containerWidth = imageContainerRef.current.offsetWidth;
@@ -51,7 +47,7 @@ export const GalleryWithText: React.FC<GalleryWithTextProps> = ({
         ease: "Expo.easeInOut",
       });
     }
-  }, [current, wsize.width]); // Added wsize.width to recalculate on resize
+  }, [current, wsize.width]);
 
   const handlePrev = () => {
     setCurrent((prev) => (prev === 0 ? imgsarray.length - 1 : prev - 1));
@@ -61,7 +57,6 @@ export const GalleryWithText: React.FC<GalleryWithTextProps> = ({
     setCurrent((prev) => (prev === imgsarray.length - 1 ? 0 : prev + 1));
   };
 
-  // Swipe handlers
   const onTouchStart = (e: React.TouchEvent) => {
     touchStartX.current = e.changedTouches[0].clientX;
   };
@@ -83,7 +78,6 @@ export const GalleryWithText: React.FC<GalleryWithTextProps> = ({
     touchEndX.current = null;
   };
 
-  // Mouse swipe handlers
   const onMouseDown = (e: React.MouseEvent) => {
     isMouseDown.current = true;
     mouseDownX.current = e.clientX;
@@ -145,8 +139,8 @@ export const GalleryWithText: React.FC<GalleryWithTextProps> = ({
           ref={imageContainerRef}
           className={` ${`order-${nums2}`} max-h-[600px] mt-0 overflow-hidden`}
           style={{
-            maxHeight: "70vh", // Responsive max height like Gallery.tsx
-            aspectRatio: "16/9", // Optional: keeps a nice aspect ratio
+            maxHeight: "70vh",
+            aspectRatio: "16/9",
             position: "relative",
           }}
         >
@@ -162,7 +156,6 @@ export const GalleryWithText: React.FC<GalleryWithTextProps> = ({
               <div
                 key={item.id}
                 className="flex-shrink-0 flex justify-center bg-blue-300"
-                // style={{ width: `${100 / imgsarray.length}%`, height: "100%" }}
               >
                 <img
                   src={item.img}
@@ -180,7 +173,6 @@ export const GalleryWithText: React.FC<GalleryWithTextProps> = ({
           </div>
         </div>
         <div
-          // className={` ${`order-${nums1}`} flex flex-col w-full md:w-7/12 align-bottom`}
           className={` ${`order-${nums1}`} flex flex-col w-full md:w-1/4 align-bottom`}
         >
           <div className="montserratlight text-4xl text-base-content">

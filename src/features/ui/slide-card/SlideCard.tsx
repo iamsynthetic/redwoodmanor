@@ -1,5 +1,3 @@
-// import styles from "./styles.module.scss";
-
 type SlideProps = {
   name: string;
   quote: string;

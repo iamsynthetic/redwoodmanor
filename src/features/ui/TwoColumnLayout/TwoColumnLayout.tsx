@@ -45,7 +45,6 @@ const TwoColumnLayout: React.FC<TwoColumnLayoutProps> = ({
 
   const isSmallDevice = useMediaQuery("only screen and (max-width : 768px)");
 
-  // Safety check to ensure eventData exists and has the specified index
   if (!eventData || !eventData[eventIndex]) {
     return <div>No event data available</div>;
   }
@@ -53,10 +52,8 @@ const TwoColumnLayout: React.FC<TwoColumnLayoutProps> = ({
   const currentEvent = eventData[eventIndex];
 
   if (isSmallDevice) {
-    // Mobile layout: stacked with right column first
     return (
       <div className={`flex flex-col w-full p-6 space-y-6 ${className}`}>
-        {/* Right Column - full width on mobile, shows first */}
         <div className="w-full">
           <p className="text-sm cardoregular text-base-content">
             {currentEvent.schedule.dates}
@@ -73,7 +70,6 @@ const TwoColumnLayout: React.FC<TwoColumnLayoutProps> = ({
           </p>
         </div>
 
-        {/* Left Column - full width on mobile, shows second */}
         <div className="w-full mb-6">
           <div className="space-y-1">
             <p className="text-sm cardoregular text-base-content">
@@ -104,11 +100,8 @@ const TwoColumnLayout: React.FC<TwoColumnLayoutProps> = ({
       </div>
     );
   }
-
-  // Desktop layout: original two-column layout
   return (
     <div className={`flex w-full p-6 ${className}`}>
-      {/* Left Column - 1/4 width */}
       <div className="w-1/4 pr-6">
         <h2 className="text-3xl montserratlight text-base-content mb-1">
           {currentEvent.schedule.title}
@@ -137,7 +130,6 @@ const TwoColumnLayout: React.FC<TwoColumnLayoutProps> = ({
         </div>
       </div>
 
-      {/* Right Column - 3/4 width */}
       <div className="w-3/4">
         <h1 className="text-3xl montserratlight text-base-content mb-1">
           {currentEvent.event.title}

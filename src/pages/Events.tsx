@@ -3,13 +3,6 @@ import breathtaking from "../data/events/breathtaking.json";
 import galleryimages from "../data/events/events-gallery.json";
 import weddingsarr from "../data/events/weddings.json";
 import corporatearr from "../data/events/corporate.json";
-
-// import HistoricTudor from "../features/ui/image-text-block/ImageTextBlock";
-// import Breathtaking from "../features/ui/image-text-block/ImageTextBlockalt";
-// import TheWeddings from "../features/ui/image-text-block/ImageTextBlock";
-// import TheCorporate from "../features/ui/image-text-block/ImageTextBlock";
-// import Eventgallery from "../features/ui/galleries/Gallery";
-// import ContactForm from "../features/ui/contact-form/contactform";
 import Hero from "../features/ui/hero/Hero";
 import { Suspense, lazy } from "react";
 import { useMediaQuery } from "@uidotdev/usehooks";
@@ -65,7 +58,6 @@ function Events() {
       const scrollToAnchor = () => {
         const el = document.getElementById(id);
         if (el) {
-          // Give more time for layout to settle
           setTimeout(() => {
             el.scrollIntoView({ behavior: "smooth", block: "start" });
           }, 300);
@@ -83,13 +75,11 @@ function Events() {
   return (
     <div>
       <Hero
-        // image="/public/assets/events/hero/hero.png"
-
         image={heroImage}
         alt="a man golfing, sand dune's in the background with the sun setting"
         title="Events"
         titlecolor="text-base-content"
-        bodyText="Redwood Manor hosts a wide range of events—from elegant weddings and corporate gatherings to social mixers and family celebrations offering expert planning and stunning venues for&nbsp;every&nbsp;occasion."
+        bodyText="Redwood Manor hosts a wide range of events, from elegant weddings and corporate gatherings to social mixers and family celebrations offering expert planning and stunning venues for&nbsp;every&nbsp;occasion."
         bodyTextcolor="text-base-content"
         height="800px"
       />
